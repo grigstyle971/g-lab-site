@@ -1,0 +1,503 @@
+/* A shared visual system for the studio, course, lessons and account. */
+:root {
+  color-scheme: dark;
+  --ink: #f1eee8;
+  --paper: #090b0a;
+  --accent: #c9a17c;
+  --soft: #171a18;
+  --line: rgba(239, 232, 221, 0.16);
+  --cinema-bg: #090b0a;
+  --cinema-panel: #131614;
+  --cinema-raised: #191c19;
+  --cinema-copper: #c9a17c;
+  --cinema-gold: #d8bd91;
+  --cinema-cream: #f1eee8;
+  --cinema-muted: #aaa69f;
+  --cinema-line: rgba(239, 232, 221, 0.16);
+  --font-display: var(--font-space), var(--font-ui), sans-serif;
+  --font-body: var(--font-ui), Arial, sans-serif;
+  --font-technical: var(--font-mono), monospace;
+}
+
+html { background: var(--cinema-bg); }
+html[lang="ru"] { --font-display: var(--font-ui), Arial, sans-serif; }
+body { background: var(--cinema-bg) !important; color: var(--cinema-cream) !important; font-family: var(--font-body) !important; }
+button, input, textarea, select { font-family: var(--font-body) !important; }
+h1, h2, h3, h4 { font-family: var(--font-display) !important; font-feature-settings: "ss01" on, "kern" on; }
+.eyebrow, .portfolio-index, .studio-path-label, .service-list span,
+.portfolio-stack, .course-sales-meta { font-family: var(--font-technical) !important; }
+h1 em, h2 em, h3 em { font-family: inherit !important; font-style: normal !important; }
+
+.site-language-bar {
+  background: rgba(9, 11, 10, 0.96);
+  border-color: var(--cinema-line);
+  color: var(--cinema-cream);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.site-language-bar a[aria-current="true"] { background: var(--cinema-copper); color: #11120f; }
+.site-language-bar a:focus-visible { outline-color: var(--cinema-copper); }
+.site-language-note { border-color: var(--cinema-copper); background: #191714; color: #e9e3d9; }
+.not-found-page { color: var(--cinema-cream); }
+
+/* Course sales: keep the promise and purchase action clear, with the artwork
+   carrying the atmosphere instead of competing gradients and bright panels. */
+.course-sales {
+  min-height: 100vh;
+  background: var(--cinema-bg) !important;
+  color: var(--cinema-cream) !important;
+}
+.course-sales-nav, .course-sales-footer {
+  background: rgba(9, 11, 10, 0.96);
+  color: var(--cinema-cream);
+  border-color: var(--cinema-line) !important;
+}
+.course-sales-nav .brand span, .course-sales-footer .brand span { color: var(--cinema-copper) !important; }
+.course-sales-hero {
+  position: relative;
+  isolation: isolate;
+  background: #0d100e !important;
+}
+.course-sales-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(8, 10, 9, .96) 0%, rgba(8, 10, 9, .83) 45%, rgba(8, 10, 9, .38) 100%),
+    linear-gradient(0deg, rgba(8, 10, 9, .82), transparent 55%),
+    url('/g-lab-cosmos-hero.webp') 62% 48% / cover no-repeat;
+  transform: scale(1.025);
+  transform-origin: 55% 48%;
+  animation: course-cosmos-drift 42s ease-in-out infinite alternate;
+}
+.course-sales-hero > * { position: relative; z-index: 1; }
+.course-sales-copy h1 em { color: var(--cinema-copper); }
+.course-sales-lead, .course-sales-brief, .course-sales-device-note,
+.course-sales-hero-price span, .course-sales-hero-tax { color: #c9c5bd !important; }
+.course-sales-meta { border-color: var(--cinema-line); color: #d5cfc5; }
+.course-sales-hero-purchase .course-sales-buy button,
+.course-sales-final .course-sales-buy button {
+  background: var(--cinema-copper) !important;
+  color: #11120f !important;
+  border: 1px solid rgba(240, 211, 183, .5);
+  box-shadow: 0 0 28px rgba(201, 161, 124, .17);
+}
+.course-sales-hero-purchase .course-sales-buy button span,
+.course-sales-final .course-sales-buy button span { color: #11120f !important; }
+.course-sales-buy button { transition: transform .22s ease, box-shadow .22s ease, background .22s ease; }
+.course-sales-buy button:focus-visible { outline: 2px solid #f0d4b9; outline-offset: 4px; }
+.course-sales-buy button:disabled { background: #555952 !important; color: #e5e1da !important; box-shadow: none; }
+.course-sales-buy button:not(:disabled) {
+  background: var(--cinema-gold) !important;
+  color: #14120e !important;
+  border: 1px solid rgba(246, 226, 193, .82);
+  box-shadow: 0 0 0 1px rgba(246, 226, 193, .1), 0 0 24px rgba(216, 189, 145, .27), inset 0 1px 0 rgba(255, 255, 255, .28);
+}
+.course-sales-buy button:not(:disabled) span { color: #14120e !important; }
+.course-sales-visual { background: #0b0e0c !important; box-shadow: 0 26px 70px rgba(0, 0, 0, .35); }
+.course-sales-visual img { object-fit: cover; object-position: 65% center; filter: brightness(.88) saturate(.86); }
+.course-sales-outcomes, .course-sales-modules, .course-sales-purchase {
+  background: #0d100e !important;
+  color: var(--cinema-cream) !important;
+}
+.course-sales-outcome-grid, .course-sales-outcome-grid article,
+.course-sales-module-list, .course-sales-module-list article,
+.course-sales-module-lessons, .course-sales-module-lessons li { border-color: var(--cinema-line) !important; }
+.course-sales-outcome-grid span, .course-sales-module-list article > span,
+.course-sales-access li span, .course-sales-module-lessons li > span,
+.course-sales-module-lessons li small { color: var(--cinema-muted) !important; }
+.course-sales-module-list p, .course-sales-result-copy > p:last-child,
+.course-sales-result-copy > .course-sales-scope-note,
+.course-sales-purchase > div:first-child span,
+.course-sales-purchase > p { color: #b8b4ad !important; }
+.course-sales-module-lessons summary { color: #eeeae3; }
+.course-sales-access, .course-sales-result {
+  background: linear-gradient(135deg, #171714, #111412 70%, #191613) !important;
+  color: var(--cinema-cream) !important;
+}
+.course-sales-access ol, .course-sales-access li { border-color: rgba(201, 161, 124, .34) !important; }
+.course-sales-access li span, .course-sales-result-preview i { color: var(--cinema-copper) !important; }
+.course-sales-result-preview { box-shadow: 12px 14px 0 rgba(201, 161, 124, .24) !important; }
+.course-sales-faq {
+  background: #111412 !important;
+  color: var(--cinema-cream) !important;
+}
+.course-sales-faq-list, .course-sales-faq-list details { border-color: var(--cinema-line) !important; }
+.course-sales-faq-list details p { color: #bbb7b0 !important; }
+.course-sales-final { background: #090b0a !important; color: var(--cinema-cream) !important; }
+.course-sales-final .eyebrow, .course-sales-final h2 em { color: var(--cinema-copper) !important; }
+.course-sales-final .course-sales-buy > p { color: var(--cinema-muted) !important; }
+.course-sales-footer a { color: #e8e2d9 !important; }
+
+/* The older course overview and lesson workspace now share the same night-sky
+   palette while preserving their readable lesson-first structure. */
+.course-page, .academy-page, .lesson-page {
+  background: var(--cinema-bg) !important;
+  color: var(--cinema-cream) !important;
+}
+.course-nav, .academy-nav, .lesson-nav, .course-footer, .academy-footer {
+  background: rgba(9, 11, 10, .96) !important;
+  color: var(--cinema-cream) !important;
+  border-color: var(--cinema-line) !important;
+}
+.course-nav-cta, .academy-nav > a:last-child, .lesson-back { border-color: var(--cinema-copper) !important; }
+.course-hero, .academy-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #0e110f !important;
+  color: var(--cinema-cream) !important;
+}
+.course-hero::before, .academy-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(9, 11, 10, .91), rgba(9, 11, 10, .72) 52%, rgba(9, 11, 10, .42)),
+    url('/g-lab-cosmos-hero.webp') 65% 48% / cover no-repeat;
+  transform: scale(1.025);
+  transform-origin: 60% 48%;
+  animation: course-cosmos-drift 46s ease-in-out infinite alternate;
+}
+@keyframes course-cosmos-drift {
+  from { transform: scale(1.025) translate3d(-.25%, .1%, 0); }
+  to { transform: scale(1.075) translate3d(.35%, -.2%, 0); }
+}
+.course-hero > *, .academy-hero > * { position: relative; z-index: 1; }
+.course-hero-copy h1 em, .course-intro h2 em, .system-sticky h2 em,
+.proof-copy h2 em, .course-cta h2 em, .academy-hero h1 em { color: var(--cinema-copper) !important; }
+.course-lead, .academy-hero > div:first-child > p:last-of-type { color: #c9c5bd !important; }
+.course-orbit { border-color: rgba(201, 161, 124, .3) !important; }
+.course-note span { background: var(--cinema-copper) !important; color: #10120f !important; }
+.course-marquee, .course-cta, .course-footer { background: #111412 !important; color: var(--cinema-cream) !important; }
+.course-marquee i, .course-cta .eyebrow { color: var(--cinema-copper) !important; }
+.course-intro, .course-system { background: #0d100e !important; border-color: var(--cinema-line) !important; }
+.course-proof { background: #121513 !important; color: var(--cinema-cream) !important; }
+.course-stack { background: #1b1916 !important; color: var(--cinema-cream) !important; }
+.course-stack span { background: #25221e !important; border: 1px solid rgba(201, 161, 124, .32); }
+.course-footer .brand, .course-footer > a:last-child { color: var(--cinema-cream) !important; }
+.module-list, .module, .course-intro { border-color: var(--cinema-line) !important; }
+.module p, .course-cta p:not(.eyebrow) { color: #bcb8b1 !important; }
+.proof-card { background: #191c19 !important; border: 1px solid var(--cinema-line); }
+.proof-card .eyebrow, .proof-row b { color: var(--cinema-copper) !important; }
+.academy-hero h1 { color: var(--cinema-cream); }
+.progress-summary { background: #171a18 !important; border: 1px solid var(--cinema-line); box-shadow: 0 20px 60px rgba(0, 0, 0, .25); }
+.progress-summary span { color: var(--cinema-copper) !important; background: transparent !important; }
+.progress-track i { background: var(--cinema-copper) !important; }
+.progress-track { background: #383a36 !important; }
+.academy-roadmap { background: #0c0f0d; }
+.roadmap-head { border-color: var(--cinema-line) !important; }
+.academy-module { border-color: var(--cinema-line) !important; }
+.academy-module-title p, .academy-lesson p, .academy-lesson time { color: #aaa79f !important; }
+.academy-lessons { border-color: var(--cinema-line) !important; }
+.academy-lesson { border-color: var(--cinema-line) !important; transition: padding-left .24s ease, background .24s ease, border-color .24s ease; }
+.academy-lesson:hover { background: #151815 !important; border-color: rgba(201, 161, 124, .35) !important; }
+.academy-lesson.active, .academy-lesson[aria-current="page"] { color: var(--cinema-copper) !important; }
+.academy-example-link { color: #e8dfd4; border-color: var(--cinema-copper) !important; }
+.academy-footer { border-color: var(--cinema-line) !important; }
+.lesson-layout { background: #0b0e0c; }
+.lesson-sidebar { border-color: var(--cinema-line) !important; }
+.lesson-sidebar h2 { color: var(--cinema-cream); }
+.lesson-side-list { border-color: var(--cinema-line) !important; }
+.lesson-side-list a { border-color: var(--cinema-line) !important; color: #aaa79f !important; }
+.lesson-side-list a.active { color: var(--cinema-cream) !important; border-left: 2px solid var(--cinema-copper); padding-left: 9px; }
+.lesson-content { color: var(--cinema-cream); }
+.lesson-summary, .lesson-teach p { color: #c5c1b9 !important; }
+.lesson-video { background: #141715 !important; border: 1px solid var(--cinema-line); box-shadow: 0 24px 70px rgba(0, 0, 0, .3); }
+.lesson-video::before { background: radial-gradient(circle at 35% 30%, #d3b293 0, #8d6d52 27%, #28211b 68%) !important; opacity: .74; }
+.lesson-video span, .lesson-video i { color: var(--cinema-copper) !important; }
+.lesson-video i { background: #f1e7dc !important; }
+.lesson-block ol, .lesson-block li, .lesson-actions ol, .lesson-actions li,
+.lesson-recording, .lesson-recording figcaption { border-color: var(--cinema-line) !important; }
+.lesson-block li, .lesson-actions li { color: #e9e5de; }
+.lesson-block li::before, .lesson-actions li::before, .lesson-brief dt { color: var(--cinema-copper) !important; }
+.lesson-prompt, .lesson-brief, .lesson-example, .lesson-recording {
+  background: #161916 !important;
+  color: var(--cinema-cream) !important;
+  border: 1px solid var(--cinema-line);
+}
+.lesson-prompt { border-color: rgba(201, 161, 124, .28) !important; }
+.lesson-prompt button, .lesson-prompt .copy-prompt { color: var(--cinema-cream); }
+.lesson-playbook { color: var(--cinema-cream); }
+.complete-button { background: #262925 !important; color: var(--cinema-cream) !important; border: 1px solid rgba(239, 232, 221, .2) !important; }
+.complete-button.is-complete { background: var(--cinema-copper) !important; color: #11120f !important; border-color: var(--cinema-copper) !important; }
+.next-lesson { border-color: var(--cinema-copper) !important; }
+.next-lesson > span { color: var(--cinema-copper); }
+.next-lesson > b { color: var(--cinema-cream); }
+.workspace-steps, .workspace-steps li { border-color: var(--cinema-line) !important; }
+.workspace-steps i { border-color: rgba(201, 161, 124, .48) !important; }
+.workspace-steps .is-done i { background: var(--cinema-copper) !important; border-color: var(--cinema-copper) !important; color: #11120f !important; }
+.workspace-heading { border-color: var(--cinema-line) !important; }
+.workspace-heading > span { background: #211c18 !important; color: #e9ddcf; }
+.copy-prompt { background: #27231f !important; color: var(--cinema-cream) !important; border-color: var(--cinema-copper) !important; }
+.lesson-recording { box-shadow: 12px 14px 0 rgba(201, 161, 124, .2) !important; }
+.lesson-recording figcaption span { color: var(--cinema-copper) !important; }
+
+/* Account, sign-in, progress and policy pages use quiet elevated panels so
+   the account workflow remains calmer than the cinematic sales pages. */
+.account-page {
+  background: var(--cinema-bg) !important;
+  color: var(--cinema-cream) !important;
+  font-family: var(--font-body) !important;
+}
+.account-nav, .account-footer { border-color: var(--cinema-line) !important; }
+.account-nav .brand span { color: var(--cinema-copper) !important; }
+.account-eyebrow { color: var(--cinema-copper) !important; }
+.account-intro > p:not(.account-eyebrow), .policy-intro,
+.policy-content section p, .policy-content li { color: #c0bcb5 !important; }
+.account-form-card, .account-panel, .payment-choice {
+  background: linear-gradient(145deg, #171a18, #111412) !important;
+  color: var(--cinema-cream) !important;
+  border: 1px solid var(--cinema-line) !important;
+  border-radius: 18px;
+  box-shadow: 0 22px 66px rgba(0, 0, 0, .22);
+}
+.account-form-card input, .owner-access-panel input, .owner-access-panel select,
+.account-panel input, .account-panel textarea, .account-panel select {
+  background: #0c0f0d !important;
+  color: var(--cinema-cream) !important;
+  border-color: rgba(239, 232, 221, .24) !important;
+}
+.account-form-card input::placeholder, .account-panel input::placeholder,
+.account-panel textarea::placeholder { color: #89867f; }
+.account-password-toggle {
+  color: var(--cinema-copper) !important;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.account-password-toggle:hover {
+  background: rgba(201, 161, 124, .1) !important;
+  border-color: rgba(201, 161, 124, .28);
+}
+.account-password-toggle:active {
+  background: rgba(201, 161, 124, .17) !important;
+}
+.account-form-card small, .account-note, .account-panel small,
+.account-empty, .account-orders small { color: #b0aca5 !important; }
+.account-primary {
+  background: var(--cinema-copper) !important;
+  border-color: var(--cinema-copper) !important;
+  color: #11120f !important;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.account-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201, 161, 124, .2); }
+.account-badge, .account-notice, .account-sync-note {
+  background: #211c18 !important;
+  color: #eee4d9 !important;
+  border-color: rgba(201, 161, 124, .32) !important;
+}
+.account-progress-bar { background: #353833 !important; }
+.account-progress-bar span { background: var(--cinema-copper) !important; }
+.payment-options button {
+  background: #121513 !important;
+  color: var(--cinema-cream) !important;
+  border-color: rgba(201, 161, 124, .4) !important;
+}
+.account-orders li, .account-module-progress li, .student-list > li { border-color: var(--cinema-line) !important; }
+.account-total { color: #f1d3b7; }
+.account-page :focus-visible, .first-lesson :focus-visible,
+.course-example :focus-visible { outline-color: var(--cinema-copper) !important; }
+.policy-content { color: var(--cinema-cream) !important; }
+.policy-content section { border-color: var(--cinema-line); }
+
+/* The guided lesson includes real forms and practice widgets. Keep them
+   readable and tactile without falling back to the old green learning UI. */
+.first-lesson {
+  background: var(--cinema-bg) !important;
+  color: var(--cinema-cream) !important;
+  font-family: var(--font-body) !important;
+  --fl-accent: var(--cinema-copper) !important;
+}
+.fl-nav { background: #0b0e0c; border-color: var(--cinema-line) !important; }
+.fl-nav .brand span { color: var(--cinema-copper) !important; }
+.fl-header {
+  position: relative;
+  isolation: isolate;
+  max-width: none !important;
+  padding: clamp(48px, 8vw, 105px) max(7vw, calc((100vw - 1240px) / 2)) 64px !important;
+  background: #101311;
+  overflow: hidden;
+}
+.fl-header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(9, 11, 10, .95), rgba(9, 11, 10, .77) 55%, rgba(9, 11, 10, .5)),
+    url('/g-lab-cosmos-hero.webp') 63% 52% / cover no-repeat;
+}
+.fl-header h1, .first-lesson h2 { color: var(--cinema-cream); }
+.first-lesson .fl-kicker, .first-lesson .fl-tools article > span { color: var(--cinema-copper) !important; }
+.fl-header > p:not(.fl-kicker), .fl-content p { color: #c8c4bc; }
+.fl-meta span { background: #191c19 !important; border: 1px solid var(--cinema-line); color: #d8d3ca; }
+/* These cards retain the responsive grid from first-lesson.css. Set both
+   the surface and the copy here so route CSS cannot restore the light theme. */
+.first-lesson .fl-tools {
+  background: var(--cinema-line);
+  border-color: var(--cinema-line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.first-lesson .fl-tools > article {
+  min-width: 0;
+  background: var(--cinema-panel);
+  color: var(--cinema-cream);
+}
+.first-lesson .fl-tools h2 { color: var(--cinema-cream); }
+.first-lesson .fl-tools p { color: #c8c4bc; }
+.first-lesson .fl-tools small { color: var(--cinema-muted); }
+.first-lesson button, .first-lesson .fl-primary {
+  background: #191c19;
+  color: var(--cinema-cream);
+  border-color: rgba(239, 232, 221, .22);
+  border-radius: 9px;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.first-lesson button:hover { background: #25231f !important; border-color: rgba(201, 161, 124, .58); }
+.first-lesson .fl-primary { background: var(--cinema-copper) !important; border-color: var(--cinema-copper) !important; color: #11120f !important; font-weight: 750; }
+.fl-body { color: var(--cinema-cream); }
+.fl-toc { background: rgba(15, 18, 16, .96); border: 1px solid var(--cinema-line); border-radius: 12px; padding: 14px; }
+.fl-toc > a { border-color: var(--cinema-line) !important; color: #c3bfb7; }
+.fl-toc > a:hover, .fl-toc [aria-current="page"] { background: #211c18 !important; color: var(--cinema-cream) !important; border-left-color: var(--cinema-copper) !important; }
+.fl-outcome, .fl-do, .fl-practice, .fl-assessment fieldset,
+.fl-guide-step, .fl-beginner, .project-challenge, .lesson-activities,
+.activity-scenario, .activity-order li, .screen-card, .fl-checks,
+.fl-real-work, .fl-video-status {
+  background: #151816 !important;
+  color: var(--cinema-cream) !important;
+  border-color: var(--cinema-line) !important;
+  border-radius: 14px;
+}
+/* Shared lesson widgets also need dark surfaces, including the nested
+   cards and mobile contents panel that still have legacy light defaults. */
+.first-lesson .fl-toc,
+.fl-real-work article,
+.first-lesson .fl-completion,
+.first-lesson .fl-screen,
+.first-lesson .fl-screen-dialog,
+.first-lesson .fl-screen-refresher,
+.first-lesson .fl-screen-explainer,
+.first-lesson .fl-guide-location,
+.first-lesson .fl-guide-result {
+  background: var(--cinema-panel) !important;
+  color: var(--cinema-cream);
+  border-color: var(--cinema-line) !important;
+}
+.fl-real-work article small { color: var(--cinema-copper); }
+.fl-real-work article h3 { color: var(--cinema-cream); }
+.fl-real-work a:focus-visible {
+  outline: 2px solid var(--cinema-copper);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.first-lesson .fl-guide-result,
+.first-lesson .fl-screen-explainer { border-left-color: var(--cinema-copper) !important; }
+.first-lesson .screen-canvas,
+.first-lesson .fl-screen-clean .fl-screen-stage,
+.first-lesson .fl-screen-open span {
+  background: var(--cinema-raised);
+  color: var(--cinema-cream);
+  border-color: var(--cinema-line);
+}
+.first-lesson .screen-practice,
+.first-lesson .screen-caption { border-color: var(--cinema-line); }
+.first-lesson .screen-step-count { color: var(--cinema-muted); }
+.first-lesson .fl-screen-clean .screen-expand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  background: var(--cinema-raised);
+  color: var(--cinema-cream);
+  border: 1px solid var(--cinema-line);
+}
+.first-lesson .fl-screen-zoom { background: var(--cinema-bg); }
+/* Convert only legacy light-theme product screenshots; custom Codex diagrams and
+   official Vercel dark-mode assets keep their original colors. The figure-level
+   attribute also covers the enlarged image and avoids relying on a React class. */
+.fl-screen-clean[data-image-treatment="dark-filter"] .fl-screen-stage > img,
+.fl-screen-clean[data-image-treatment="dark-filter"] .fl-screen-zoom img {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+.fl-outcome, .fl-do, .fl-practice, .project-challenge { border-left-color: var(--cinema-copper) !important; }
+.fl-do strong, .project-challenge h3, .lesson-activities h3 { color: #f0e6da; }
+.first-lesson .fl-note, .fl-brief-grid small, .fl-guide-step p,
+.screen-detail-copy p, .screen-practice p, .fl-real-work p { color: #b8b4ad !important; }
+.fl-chapter, .fl-sources, .fl-next a, .fl-troubleshooting details { border-color: var(--cinema-line) !important; }
+.fl-next a { color: var(--cinema-cream); }
+.fl-next small, .fl-toc [aria-current="page"] { color: var(--cinema-copper) !important; }
+.fl-practice, .fl-assessment { box-shadow: 0 22px 70px rgba(0, 0, 0, .19); }
+.fl-toolbar button, .screen-detail-actions button, .activity-order button,
+.first-lesson .screen-choice, .fl-guide-mode button, .fl-guide-navigation button {
+  background: #20231f !important;
+  color: var(--cinema-cream) !important;
+  border-color: rgba(239, 232, 221, .2) !important;
+}
+.fl-code textarea, .fl-prompt, .fl-screen-clean, .fl-notebook textarea,
+.fl-brief-grid textarea { background: #090c0a !important; color: #eee9e1 !important; border-color: rgba(201, 161, 124, .35) !important; }
+.fl-preview iframe { border-color: var(--cinema-line) !important; }
+.fl-code label, .fl-preview-bar, .screen-caption, .fl-screen-clean p { color: #c6c1b8; }
+.fl-screen-clean { border-color: var(--cinema-line) !important; }
+.fl-assessment fieldset { border: 1px solid var(--cinema-line) !important; }
+.fl-assessment fieldset label:has(input:checked), .activity-scenario label.is-selected,
+.screen-choice[aria-pressed="true"] { background: #282018 !important; border-color: var(--cinema-copper) !important; }
+.first-lesson .activity-footer button { background: var(--cinema-copper) !important; color: #11120f !important; border-color: var(--cinema-copper) !important; }
+.first-lesson .pass { color: #d8c5ae !important; }
+.first-lesson .fail { color: #e4aaa0 !important; }
+.fl-chapter > .fl-note, .project-challenge-evidence,
+.lesson-activities .pass, .lesson-activities .fail { background: #1c1b17 !important; }
+.lesson-activities .pass { border: 1px solid rgba(201, 161, 124, .4); }
+.fl-screen-clean .screen-heading { border-color: var(--cinema-line); }
+.fl-screen-clean .screen-marker { background: var(--cinema-copper); color: #11120f; }
+.cloud-workbook, .lesson-feedback {
+  background: #151816 !important;
+  color: var(--cinema-cream) !important;
+  border-color: var(--cinema-line) !important;
+}
+.cloud-workbook input, .cloud-workbook textarea, .lesson-feedback input,
+.lesson-feedback textarea { background: #090c0a !important; color: var(--cinema-cream) !important; border-color: rgba(239, 232, 221, .25) !important; }
+.cloud-workbook button, .lesson-feedback button { background: #211c18; color: var(--cinema-cream); border-color: rgba(201, 161, 124, .44); }
+
+/* The worked example uses the same dark surfaces as the lessons.
+   Its component stylesheet owns the layout and nested demo palette. */
+.course-example {
+  --ce-ink: var(--cinema-cream);
+  --ce-paper: var(--cinema-bg);
+  --ce-accent: var(--cinema-copper);
+  --ce-muted: var(--cinema-muted);
+}
+.ce-demo-wrap {
+  background: radial-gradient(ellipse at 50% 0, rgba(201, 161, 124, .12), transparent 55%), var(--cinema-bg);
+}
+.ce-site-hero { background: linear-gradient(120deg, #211d19, #171a18); }
+.ce-footer { border-top: 1px solid var(--cinema-line); }
+
+@media (hover: hover) and (pointer: fine) {
+  .course-sales-buy button:hover:not(:disabled), .account-primary:hover,
+  .first-lesson .fl-primary:hover { transform: translateY(-2px); }
+}
+.course-sales-buy button:active:not(:disabled),
+.studio-page .studio-home-course-purchase .course-sales-buy button:active:not(:disabled) { transform: scale(.985); }
+@media (max-width: 760px) {
+  .course-sales-hero::before { background-position: center, center, 66% center; }
+  .course-sales-visual img { object-position: 67% center; }
+  .course-hero::before, .academy-hero::before { background-position: center, 68% center; }
+  .academy-hero { padding-top: 64px !important; padding-bottom: 58px !important; }
+  .academy-roadmap { padding-top: 68px; padding-bottom: 68px; }
+  .lesson-layout { background: #0b0e0c; }
+  .lesson-content { padding-top: 54px !important; }
+  .account-layout { gap: 24px !important; }
+  .fl-header { padding: 48px 22px 40px !important; }
+  .fl-toc { max-height: 260px; }
+  .fl-practice, .fl-real-work, .lesson-activities { margin-inline: 10px; padding: 18px !important; }
+  .ce-intro, .ce-before, .ce-demo-wrap, .ce-review, .ce-prompt-section, .ce-your-turn { scroll-margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

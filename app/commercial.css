@@ -1,0 +1,6 @@
+/* Commercial course layer: clear proof, restrained polish and usable video. */
+.course-trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.course-trust span{border:1px solid currentColor;padding:8px 10px;font:600 9px "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}
+.lesson-recording{margin:52px 0 22px;background:#171817;border:1px solid #171817;box-shadow:14px 16px 0 #c8b9ab;overflow:hidden}.lesson-recording video{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:#171817}.lesson-recording figcaption{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 17px;color:#d9d6cf;font:500 10px/1.45 "DM Mono",monospace}.lesson-recording figcaption span{flex:0 0 auto;color:#c9a17c;letter-spacing:.1em}
+.lesson-brief{margin-top:44px}.academy-module-title h2{max-width:310px}.academy-lesson h3{transition:transform .25s ease}.academy-lesson:hover h3{transform:translateX(5px)}
+.checkout-card,.proof-card,.preview-card{border:1px solid rgba(23,24,23,.15)}
+@media(max-width:760px){.course-trust{margin-top:22px}.lesson-recording{margin:38px 0 18px;box-shadow:8px 9px 0 #c8b9ab}.lesson-recording figcaption{display:block;font-size:9px}.lesson-recording figcaption span{display:block;margin-bottom:6px}}

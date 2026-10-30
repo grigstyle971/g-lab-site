@@ -1,0 +1,1489 @@
+/* Small labels and supporting copy stay readable without changing display type. */
+.studio-page .eyebrow,
+.studio-page .studio-path-label,
+.studio-page .studio-home-course-purchase > span,
+.studio-page .studio-home-course-requirement,
+.studio-page .studio-scene-cue,
+.studio-page .portfolio-index,
+.studio-page .service-list span,
+.studio-page .contact-note,
+.studio-page .portfolio-stack span,
+.studio-page .portfolio-project-copy .eyebrow,
+.studio-page > footer,
+.studio-page > footer a,
+.studio-page > footer > span,
+.studio-page .home-transition-caption,
+.studio-page .hero-proof {
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.studio-page .studio-path > p,
+.studio-page .studio-path ul,
+.studio-page .studio-hero-heading > p:last-child,
+.studio-page .studio-home-course-purchase .course-sales-buy > p,
+.studio-page .portfolio-heading > p,
+.studio-page .portfolio-explanation > p,
+.studio-page .portfolio-project-copy > p,
+.studio-page .portfolio-project-copy li > span,
+.studio-page .service-list p,
+.studio-page .contact > .project-brief {
+  font-size: 14px !important;
+  line-height: 1.6;
+}
+
+.studio-page .studio-path-label,
+.studio-page .studio-home-course-purchase > span,
+.studio-page .portfolio-index,
+.studio-page .portfolio-project-copy .eyebrow {
+  letter-spacing: .08em;
+}
+
+.studio-page .studio-path-label,
+.studio-page .studio-home-course-requirement,
+.studio-page .home-transition-caption,
+.studio-page .hero-proof,
+.studio-page .contact-note {
+  color: rgba(241, 238, 232, .82);
+}
+
+.course-sales .course-sales-nav,
+.course-sales .course-sales-footer,
+.course-sales .course-sales-meta,
+.course-sales .course-sales-hero-price > span,
+.course-sales .course-sales-hero-tax,
+.course-sales .course-sales-device-note,
+.course-sales .course-sales-buy > p,
+.course-sales .course-sales-outcome-grid span,
+.course-sales .course-sales-module-list article > span,
+.course-sales .course-sales-module-lessons li > span,
+.course-sales .course-sales-module-lessons li small,
+.course-sales .course-sales-module-lessons summary,
+.course-sales .course-sales-purchase > div:first-child span {
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.course-sales .course-sales-module-list p,
+.course-sales .course-sales-module-lessons summary,
+.course-sales .course-sales-access > div > p:last-child,
+.course-sales .course-sales-result-copy > p:last-child,
+.course-sales .course-sales-final > p:not(.eyebrow),
+.course-sales .course-sales-faq-list details p {
+  font-size: 14px !important;
+  line-height: 1.6;
+}
+
+.course-sales .course-sales-module-lessons li strong {
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+.course-page .course-nav > p,
+.course-page .course-actions > span,
+.course-page .course-note,
+.course-page .proof-row span,
+.course-page .course-marquee {
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.first-lesson :is(small, .fl-kicker, .fl-meta, .fl-tools article > span,
+  .fl-code label, .fl-preview-bar, .fl-next small, .fl-real-work small,
+  .fl-screen-refresher small) {
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.first-lesson .fl-toc {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.lesson-page .prompt-hint,
+.lesson-page .lesson-brief dt,
+.lesson-page .lesson-brief dd,
+.lesson-page .lesson-actions li::before,
+.lesson-page .workspace-heading > span,
+.lesson-page .workspace-steps i,
+.lesson-page .technical-guide header span,
+.lesson-page .technical-guide li > span,
+.lesson-page .technical-guide small,
+.lesson-page .technical-guide em,
+.lesson-page .technical-guide-visual figcaption,
+.lesson-page .lesson-example span,
+.lesson-page .course-trust span,
+.lesson-page .lesson-recording figcaption {
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.account-page .account-footer,
+.account-page .account-form-card small,
+.account-page .account-note,
+.account-page .account-terms-links,
+.account-page .account-panel small,
+.account-page .student-list small,
+.account-page .student-list p,
+.account-page .owner-access-panel [role="status"] {
+  font-size: 13px !important;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .studio-page .studio-path > p,
+  .studio-page .studio-hero-heading > p:last-child,
+  .studio-page .portfolio-heading > p,
+  .studio-page .portfolio-explanation > p,
+  .studio-page .portfolio-project-copy > p,
+  .studio-page .portfolio-project-copy li > span,
+  .studio-page .service-list p,
+  .studio-page .contact > .project-brief,
+  .course-sales .course-sales-module-list p,
+  .course-sales .course-sales-access > div > p:last-child,
+  .course-sales .course-sales-result-copy > p:last-child,
+  .course-sales .course-sales-faq-list details p {
+    font-size: 14px !important;
+    line-height: 1.55;
+  }
+}
+
+/* Cover the smaller labels and helper text that the page-specific styles set later. */
+.site-language-bar--home,
+.studio-page .nav.nav--home .nav-links a,
+.studio-page .studio-hero .eyebrow,
+.studio-page .studio-path-label,
+.studio-page .studio-home-course-purchase > span,
+.studio-page .studio-home-course-requirement,
+.studio-page .studio-scene-cue,
+.studio-page .portfolio-index,
+.studio-page .portfolio-tabs button,
+.studio-page .portfolio-explanation li > span,
+.studio-page .portfolio-stack span,
+.studio-page .portfolio-project-copy .portfolio-index,
+.studio-page .service-list article > span,
+.studio-page .stack-list > span > i,
+.studio-page .learn-card > span,
+.studio-page .contact-note,
+.studio-page > footer,
+.studio-page > footer a,
+.studio-page > footer > span {
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.studio-page .studio-path-label,
+.studio-page .studio-home-course-purchase > span {
+  letter-spacing: .025em;
+}
+
+.studio-page .portfolio-explanation li,
+.studio-page .portfolio-project-copy li > span,
+.studio-page .portfolio-project-copy li strong,
+.studio-page .portfolio-project-copy > p,
+.studio-page .portfolio-project-copy > a,
+.studio-page .portfolio-flagship > header > a,
+.studio-page .portfolio-next > p,
+.studio-page .portfolio-next > a,
+.studio-page .service-list article > p,
+.studio-page .learn-card > p,
+.studio-page .learn > div > p:not(.eyebrow),
+.studio-page .contact > .project-brief {
+  font-size: 15px !important;
+  line-height: 1.6;
+}
+
+.course-sales .course-sales-copy .eyebrow,
+.course-sales .course-sales-section-heading .eyebrow,
+.course-sales .course-sales-outcomes > .eyebrow,
+.course-sales .course-sales-access .eyebrow,
+.course-sales .course-sales-final .eyebrow,
+.course-sales .course-sales-buy-row > span,
+.course-sales .course-sales-meta,
+.course-sales .course-sales-module-list article > span,
+.course-sales .course-sales-module-lessons li > span,
+.course-sales .course-sales-buy > p {
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.course-sales .course-sales-module-list p,
+.course-sales .course-sales-brief,
+.course-sales .course-sales-hero-tax,
+.course-sales .course-sales-device-note,
+.course-sales .course-sales-outcome-grid span,
+.course-sales .course-sales-module-lessons li small,
+.course-sales .course-sales-faq-list details p,
+.course-sales .course-sales-module-lessons li strong {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.academy-lesson p,
+.lesson-page .lesson-nav > span,
+.lesson-page .lesson-video small,
+.lesson-page .next-lesson > span,
+.academy-footer,
+.academy-footer p {
+  font-size: 13px !important;
+  line-height: 1.55;
+}
+
+.academy-lesson p {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .studio-page .portfolio-explanation li,
+  .studio-page .portfolio-project-copy li > span,
+  .studio-page .portfolio-project-copy li strong,
+  .studio-page .portfolio-project-copy > p,
+  .studio-page .portfolio-project-copy > a,
+  .studio-page .portfolio-flagship > header > a,
+  .studio-page .portfolio-next > p,
+  .studio-page .portfolio-next > a,
+  .studio-page .service-list article > p,
+  .studio-page .learn-card > p,
+  .studio-page .learn > div > p:not(.eyebrow),
+  .studio-page .contact > .project-brief,
+  .course-sales .course-sales-brief,
+  .course-sales .course-sales-hero-tax,
+  .course-sales .course-sales-device-note,
+  .course-sales .course-sales-outcome-grid span,
+  .course-sales .course-sales-module-lessons li small,
+  .course-sales .course-sales-module-list p,
+  .course-sales .course-sales-faq-list details p,
+  .course-sales .course-sales-module-lessons li strong,
+  .academy-lesson p {
+    font-size: 14px !important;
+    line-height: 1.55;
+  }
+}
+
+/* Final type scale: real explanations stay comfortable to read on phones and desktop. */
+.studio-page :is(
+  .eyebrow, .studio-path-label, .studio-home-course-purchase > span,
+  .studio-home-course-requirement, .studio-scene-cue, .portfolio-index,
+  .portfolio-tabs button, .portfolio-explanation li > span, .portfolio-stack span,
+  .portfolio-project-copy .portfolio-index, .service-list article > span,
+  .stack-list > span > i, .learn-card > span, .contact-note,
+  .home-transition-caption, .hero-proof, .nav.nav--home .nav-links a,
+  .nav.nav--home .nav-cta, footer, footer a
+) {
+  font-size: 14px !important;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.site-language-bar,
+.site-language-bar a {
+  font-size: 14px !important;
+  line-height: 1.4;
+}
+
+.studio-page :is(
+  .studio-path > p, .studio-path ul, .studio-hero-heading > p:last-child,
+  .studio-home-course-purchase .course-sales-buy > p,
+  .portfolio-heading > p, .portfolio-explanation > p,
+  .portfolio-explanation li, .portfolio-project-copy > p,
+  .portfolio-project-copy li > span, .portfolio-project-copy li strong,
+  .service-list p, .contact > .project-brief, .portfolio-next > p
+) {
+  font-size: 15px !important;
+  line-height: 1.6;
+}
+
+.studio-page :is(
+  .studio-path > p, .studio-home-course-requirement,
+  .portfolio-heading > p, .portfolio-explanation > p,
+  .portfolio-explanation li, .portfolio-project-copy > p,
+  .portfolio-project-copy li > span, .service-list p,
+  .contact > .project-brief, .contact-note
+) {
+  color: rgba(241, 238, 232, .9) !important;
+}
+
+.studio-page :is(
+  .studio-path-course > a.studio-home-course-overview,
+  .studio-path-services > a, .portfolio-project-copy > a,
+  .portfolio-flagship > header > a, .portfolio-next > a
+) {
+  font-size: 15px !important;
+  line-height: 1.4;
+}
+
+.course-sales :is(
+  .course-sales-nav, .course-sales-footer, .course-sales-meta,
+  .course-sales-hero-price > span, .course-sales-hero-tax,
+  .course-sales-device-note, .course-sales-buy > p,
+  .course-sales-outcome-grid span, .course-sales-module-list article > span,
+  .course-sales-module-lessons li > span,
+  .course-sales-module-lessons li small, .course-sales-module-lessons summary,
+  .course-sales-purchase > div:first-child span, .course-sales-copy .eyebrow,
+  .course-sales-section-heading .eyebrow, .course-sales-outcomes > .eyebrow,
+  .course-sales-access .eyebrow, .course-sales-final .eyebrow,
+  .course-sales-buy-row > span
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.course-sales :is(
+  .course-sales-module-list p,
+  .course-sales-access > div > p:last-child,
+  .course-sales-result-copy > p:last-child,
+  .course-sales-final > p:not(.eyebrow),
+  .course-sales-faq-list details p, .course-sales-access li,
+  .course-sales-purchase > p
+) {
+  font-size: 15px !important;
+  line-height: 1.65;
+}
+
+.course-sales :is(
+  .course-sales-brief, .course-sales-hero-tax, .course-sales-device-note,
+  .course-sales-result-copy > .course-sales-scope-note,
+  .course-sales-result-preview > span, .course-sales-buy > p,
+  .course-sales-faq-list summary
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.course-sales .course-sales-module-lessons li strong {
+  font-size: 15px !important;
+  line-height: 1.5;
+}
+
+.course-page :is(
+  .course-nav > p, .course-actions > span, .course-note,
+  .proof-row span, .course-marquee, .course-footer, .course-nav-cta,
+  .complete-button
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.course-page :is(.course-lead, .module p, .course-proof > p) {
+  font-size: 15px !important;
+  line-height: 1.65;
+}
+
+.first-lesson :is(
+  .fl-kicker, .fl-meta, .fl-tools article > span, .fl-tools small,
+  .fl-code label, .fl-preview-bar, .fl-next small, .fl-real-work small,
+  .fl-screen-refresher small, .fl-toc, .fl-prompt > p, .fl-brief-grid small,
+  .fl-guide-navigation > span, .fl-guide-navigation button,
+  .fl-screen-source, .screen-caption
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.first-lesson button,
+.academy-page .complete-button,
+.lesson-page .complete-button {
+  font-size: 14px !important;
+}
+
+.lesson-page :is(
+  .prompt-hint, .lesson-brief dt, .lesson-brief dd,
+  .lesson-actions li::before, .workspace-heading > span,
+  .workspace-steps i, .technical-guide header span,
+  .technical-guide li > span, .technical-guide small, .technical-guide em,
+  .technical-guide-visual figcaption, .lesson-example span,
+  .course-trust span, .lesson-recording figcaption,
+  .lesson-nav > span, .lesson-video small, .next-lesson > span
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.lesson-page :is(
+  .lesson-brief > div > p:last-child, .lesson-actions li,
+  .technical-guide p, .lesson-content p
+) {
+  font-size: 15px !important;
+  line-height: 1.65;
+}
+
+.academy-page :is(
+  .academy-nav, .lesson-nav, .academy-footer, .academy-lesson time,
+  .academy-module-title > span, .academy-lesson > span,
+  .lesson-side-list span, .lesson-video span, .lesson-video small,
+  .lesson-block li::before, .next-lesson > span
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.academy-page :is(
+  .progress-summary p, .academy-module-title p, .academy-lesson p,
+  .lesson-side-list a, .lesson-video p, .lesson-prompt > p,
+  .lesson-block li, .academy-footer p
+) {
+  font-size: 15px !important;
+  line-height: 1.65;
+}
+
+.account-page :is(
+  .account-footer, .account-form-card small, .account-note,
+  .account-terms-links, .account-panel small, .student-list small,
+  .owner-access-panel [role="status"]
+) {
+  font-size: 14px !important;
+  line-height: 1.6;
+}
+
+.account-page :is(.account-panel p, .student-list p, .account-form-card p) {
+  font-size: 15px !important;
+  line-height: 1.65;
+}
+
+.course-example :is(
+  .ce-header > p, .ce-header-link, .ce-eyebrow, .ce-draft-label,
+  .ce-draft-kicker, .ce-issues article > span, .ce-review-list article > span,
+  .ce-site-bar, .ce-site-bar nav a, .ce-site-hero > p, .ce-site-bottom a,
+  .ce-site-index, .ce-photo > span, .ce-gallery-note span, .ce-mini-label,
+  .ce-process-grid article > b, .ce-your-turn li > span, .ce-footer
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.course-example .ce-header > p { font-size: 13px !important; }
+
+.course-example :is(
+  .ce-process-grid p, .ce-faq details p, .ce-contact p:last-child
+) {
+  font-size: 15px !important;
+  line-height: 1.6;
+}
+
+.course-example :is(
+  .ce-dead-action, .ce-next-links a, .ce-contact > a,
+  .ce-prompt-card button, .ce-prompt-card [role="status"]
+) {
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+.course-example .ce-prompt-card pre {
+  font-size: 14px !important;
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  .course-sales .course-sales-final > p:not(.eyebrow) { font-size: 15px !important; }
+  .course-example .ce-site-bar nav a { font-size: 14px !important; }
+}
+
+/* Small controls and helper labels that were outside the first readability pass. */
+.first-lesson :is(
+  small, .fl-nav span:last-child, .fl-do a,
+  .fl-code label, .fl-preview-bar, .fl-tools article > span,
+  .fl-prompt strong, .fl-screen-clean .screen-heading .fl-kicker,
+  .fl-screen-steps li::before, .fl-screen-source,
+  .fl-screen-dialog-head button, .fl-screen-hotspot span,
+  .fl-beginner-note, .fl-guide-mode, .fl-guide-mode button,
+  .fl-guide-steps button, .fl-guide-navigation button,
+  .fl-guide-navigation a, .screen-expand, .screen-detail-actions button,
+  .screen-practice p, .screen-practice strong, .activity-scenario label,
+  .activity-scenario legend > span, .activity-order h3 > span,
+  .activity-order > p, .activity-position, .activity-footer span, .screen-choice
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.course-example :is(
+  .ce-placeholder-review, .ce-fiction-note, .ce-draft-label,
+  .ce-draft-kicker, .ce-issues article > span, .ce-review-list article > span,
+  .ce-site-bar, .ce-site-bar nav a, .ce-site-hero > p, .ce-site-bottom a,
+  .ce-site-index, .ce-photo > span, .ce-gallery-note span, .ce-mini-label,
+  .ce-process-grid article > b, .ce-contact > a, .ce-review-list small,
+  .ce-prompt-card [role="status"], .ce-footer
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+.course-example .ce-header > p { font-size: 14px !important; }
+
+.academy-page .academy-example-link,
+.account-page .account-badge,
+.account-page .account-form-card .account-terms-consent {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+/* Raise the last compact labels and helper copy used by real pages. */
+.studio-page :is(
+  .eyebrow, .studio-path-label, .studio-home-course-requirement,
+  .studio-path small, .studio-scene-cue, .portfolio-index,
+  .portfolio-browser > div > span, .portfolio-stack > span,
+  .service-list article > span, .home-transition-caption, .contact-note,
+  .studio-mobile-choices a,
+  .studio-home-purchase-copy > span, .studio-home-purchase-copy > small,
+  .studio-home-purchase-note, .system-top > span, .illustration-caption,
+  .payment-map p, .program-mini small, .program-mini > span,
+  .video-mini small, .lesson-map p, .lesson-map li,
+  .admin-map aside, .admin-map p, .phone-map span, .phone-map small
+) {
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+.studio-page .studio-home-course-purchase > span {
+  font-size: 15px !important;
+  font-weight: 600;
+}
+
+.studio-page .studio-path small,
+.studio-page .illustration-caption,
+.studio-page .program-mini small {
+  color: rgba(241, 238, 232, .9) !important;
+}
+
+.course-sales :is(
+  .course-sales-nav, .course-sales-footer, .course-sales-meta,
+  .course-sales-hero-price > span, .course-sales-hero-tax,
+  .course-sales-device-note, .course-sales-buy > p,
+  .course-sales-outcome-grid span, .course-sales-module-list article > span,
+  .course-sales-module-lessons li > span,
+  .course-sales-module-lessons li small, .course-sales-module-lessons summary,
+  .course-sales-purchase > div:first-child span,
+  .course-sales-buy-row > span, .course-sales-brief
+) {
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+.course-sales .eyebrow {
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+.course-page :is(
+  .course-nav > p, .course-actions > span, .course-note,
+  .proof-row span, .course-marquee, .course-footer, .course-nav-cta,
+  .complete-button
+),
+.first-lesson small,
+.lesson-page :is(
+  .prompt-hint, .lesson-brief dt, .lesson-brief dd,
+  .technical-guide small, .technical-guide em,
+  .technical-guide-visual figcaption, .lesson-example span,
+  .course-trust span, .lesson-recording figcaption,
+  .lesson-nav > span, .lesson-video small, .next-lesson > span
+),
+.academy-page :is(
+  .academy-nav, .lesson-nav, .academy-footer, .academy-lesson time,
+  .academy-module-title > span, .academy-lesson > span,
+  .lesson-side-list span, .lesson-video span, .lesson-video small
+),
+.account-page :is(
+  .account-footer, .account-form-card small, .account-note,
+  .account-terms-links, .account-panel small, .student-list small,
+  .account-eyebrow, .account-badge, .payment-options small,
+  .account-sync-note, .owner-access-panel [role="status"]
+),
+.course-example :is(
+  .ce-header-link, .ce-eyebrow, .ce-draft-label, .ce-draft-kicker,
+  .ce-site-bar, .ce-site-bar nav a, .ce-site-index, .ce-mini-label,
+  .ce-footer, .ce-review-list small
+) {
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+.case-copy > p:not(.case-number),
+.case-footnote,
+.case-actions .case-button {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .studio-page :is(.studio-path > p, .studio-hero-heading > p:last-child),
+  .course-sales :is(.course-sales-module-list p, .course-sales-access li,
+    .course-sales-final > p:not(.eyebrow)),
+  .course-page .module p,
+  .lesson-page :is(.lesson-content p, .technical-guide p),
+  .academy-page :is(.academy-lesson p, .lesson-block li),
+  .account-page :is(.account-panel p, .account-form-card p),
+  .course-example :is(.ce-process-grid p, .ce-faq details p, .ce-contact p) {
+    font-size: 16px !important;
+    line-height: 1.6;
+  }
+}
+
+/* Lift the remaining homepage microcopy to the same readable floor. */
+body .studio-page .studio-hero h1 em {
+  display: inline;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+body .studio-page .section-top > p:last-child,
+body .studio-page .learn > div > p:not(.eyebrow),
+body .studio-page .studio-home-course-purchase .course-sales-buy > p[role="status"] {
+  font-size: 16px !important;
+  line-height: 1.6;
+}
+
+body .studio-page :is(.intro-meta span, .intro-course-link, .cta-primary) {
+  font-size: 14px !important;
+}
+
+body .studio-page .studio-hero .eyebrow,
+body .studio-page .studio-path-label > span:first-child,
+body .studio-page .portfolio-index {
+  letter-spacing: .06em;
+}
+
+body .studio-page .studio-home-purchase-copy > small {
+  color: #5d564d !important;
+}
+
+body .studio-page .home-transition-caption {
+  max-width: calc(100% - 36px);
+  flex-wrap: wrap;
+  letter-spacing: .06em;
+}
+
+body .lesson-page :is(.prompt-hint, .lesson-brief dt, .lesson-brief dd,
+  .workspace-heading > span, .workspace-steps i, .technical-guide header span,
+  .technical-guide li > span, .lesson-example span) {
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+body .studio-page.studio-page .nav.nav--home .nav-links a,
+body .site-language-bar--home {
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+/* Last-pass floor for compact but meaningful copy on the studio and course UI. */
+body .studio-page .studio-hero .eyebrow,
+body .studio-page .studio-path-label > span:first-child,
+body .studio-page .studio-path-course .studio-home-course-purchase > span,
+body .studio-page .studio-home-course-requirement,
+body .studio-page .studio-home-purchase-copy > span,
+body .studio-page .studio-home-purchase-copy > small,
+body .studio-page .studio-home-purchase-note,
+body .studio-page .studio-home-course-purchase > p[role="status"],
+body .studio-page .studio-path-course > a.studio-home-course-overview,
+body .studio-page .studio-path-services > a,
+body .studio-page .portfolio-index,
+body .studio-page .portfolio-tabs button,
+body .studio-page .portfolio-explanation li,
+body .studio-page .portfolio-explanation li > span,
+body .studio-page .portfolio-stack > span,
+body .studio-page .portfolio-browser > div > span,
+body .studio-page .service-list article > span,
+body .studio-page .stack-list > span,
+body .studio-page .stack-list > span > i,
+body .studio-page .learn-card > span,
+body .studio-page .intro.course-intro-home > p:first-child,
+body .studio-page .contact-note,
+body .studio-page .home-transition-caption,
+body .studio-page .studio-scene-cue,
+body .studio-page .studio-mobile-choices a,
+body .studio-page > footer,
+body .studio-page > footer a,
+body .studio-page > footer > span,
+body .studio-page .site-language-bar--home,
+body .course-sales small,
+body .course-sales :is(.course-sales-nav, .course-sales-footer, .course-sales-meta,
+  .course-sales-hero-price > span, .course-sales-hero-tax, .course-sales-device-note,
+  .course-sales-buy > p, .course-sales-outcome-grid span,
+  .course-sales-module-list article > span, .course-sales-module-lessons li > span,
+  .course-sales-module-lessons li small, .course-sales-module-lessons summary,
+  .course-sales-buy-row > span),
+body .course-page :is(.course-nav > p, .course-actions > span, .course-note,
+  .proof-row span, .course-footer, .course-nav-cta),
+body .first-lesson small,
+body .lesson-page :is(small, .lesson-nav > span, .lesson-video small,
+  .next-lesson > span, .course-trust span, .technical-guide small,
+  .technical-guide em, .technical-guide-visual figcaption,
+  .lesson-recording figcaption),
+body .academy-page :is(small, time, .academy-nav, .lesson-nav, .academy-footer,
+  .academy-module-title > span, .academy-lesson > span, .lesson-side-list span,
+  .lesson-video span),
+body .account-page :is(small, .account-footer, .account-note, .account-terms-links,
+  .account-eyebrow, .account-badge, .account-sync-note),
+body .course-example :is(small, .ce-header-link, .ce-eyebrow, .ce-draft-label,
+  .ce-draft-kicker, .ce-site-bar, .ce-site-bar nav a, .ce-site-index,
+  .ce-mini-label, .ce-footer, .ce-review-list small) {
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+body .studio-page .studio-path > ul,
+body .studio-page .studio-home-purchase-copy > strong,
+body .studio-page .portfolio-project-copy li strong,
+body .studio-page .portfolio-project-copy li > span,
+body .studio-page .portfolio-project-copy > p,
+body .studio-page .service-list article > p,
+body .studio-page .learn-card > p,
+body .studio-page .learn > div > p:not(.eyebrow),
+body .studio-page .contact > .project-brief {
+  font-size: 16px !important;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  body .studio-page .studio-path > ul,
+  body .studio-page .portfolio-project-copy li strong,
+  body .studio-page .portfolio-project-copy li > span,
+  body .studio-page .portfolio-project-copy > p,
+  body .studio-page .service-list article > p,
+  body .studio-page .learn-card > p,
+  body .studio-page .contact > .project-brief {
+    font-size: 16px !important;
+  }
+}
+
+/* Prevent narrow-screen component rules from shrinking important controls again. */
+body .studio-page .nav.nav--home .nav-cta,
+body .studio-page .studio-path-course > a.studio-home-course-overview,
+body .studio-page .studio-path-services > a,
+body .studio-page .studio-home-purchase .course-sales-buy button,
+body .studio-page .studio-home-course-purchase .course-sales-buy button,
+body .course-sales .course-sales-button,
+body .course-sales .course-sales-buy button {
+  font-size: 15px !important;
+  line-height: 1.45;
+}
+
+body .studio-page :is(.studio-path-label, .studio-home-course-purchase > span,
+  .studio-home-course-requirement, .studio-scene-cue, .studio-path small,
+  .home-transition-caption, .portfolio-index, .portfolio-tabs button,
+  .portfolio-explanation li, .portfolio-explanation li > span,
+  .portfolio-stack > span, .portfolio-browser > div > span,
+  .service-list article > span, .stack-list > span > i, .learn-card > span,
+  .contact-note, .hero-proof, .studio-home-purchase-copy > span,
+  .studio-home-purchase-copy > small, .studio-home-purchase-note,
+  .studio-home-course-purchase > p[role="status"]),
+body .course-sales :is(small, time, figcaption, [role="status"],
+  .course-sales-meta, .course-sales-hero-price > span,
+  .course-sales-hero-tax, .course-sales-device-note,
+  .course-sales-module-list article > span,
+  .course-sales-module-lessons li > span,
+  .course-sales-module-lessons li small, .course-sales-buy > p),
+body .lesson-page :is(small, time, figcaption, [role="status"]),
+body .academy-page :is(small, time, figcaption, [role="status"]),
+body .account-page :is(small, time, figcaption, [role="status"]),
+body .course-example :is(small, time, figcaption, [role="status"]) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+body .studio-page .studio-home-purchase-note,
+body .studio-page .studio-home-course-purchase > p[role="status"],
+body .course-sales .course-sales-brief,
+body .course-sales .course-sales-result-copy > .course-sales-scope-note,
+body .course-sales .course-sales-faq-list details p,
+body .lesson-page .technical-guide small,
+body .lesson-page .technical-guide em,
+body .account-page .account-note,
+body .account-page .account-form-card small {
+  font-size: 15px !important;
+  line-height: 1.6;
+}
+
+/* Keep muted navigation and section labels legible over the dark film background. */
+body .studio-page :is(
+  .studio-hero .eyebrow, .studio-path-label > span:first-child,
+  .studio-scene-cue, .portfolio-stack > span, .portfolio-browser > div > span,
+  .service-list article > span, .hero-proof, .home-transition-caption,
+  .studio-mobile-choices a
+) {
+  color: rgba(241, 238, 232, .88) !important;
+}
+
+body .studio-page :is(
+  .portfolio-index, .portfolio-project-copy .eyebrow,
+  .stack-list > span > i, .contact-note
+) {
+  color: #dfbd98 !important;
+}
+
+body .studio-page > footer,
+body .studio-page > footer a {
+  color: rgba(241, 238, 232, .88) !important;
+}
+
+/* Translucent layers stay cinematic on phones without paying the full blur cost. */
+@media (max-width: 760px) {
+  body .site-language-bar--home,
+  body .studio-page .nav.nav--home {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background-color: rgba(7, 9, 8, .94) !important;
+  }
+
+  body .studio-page .studio-paths {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: linear-gradient(105deg, rgba(9, 11, 10, .94), rgba(12, 14, 13, .9) 54%, rgba(9, 11, 10, .94));
+  }
+
+  body .studio-page .portfolio-feature::after {
+    background: linear-gradient(102deg, transparent 36%, rgba(201, 161, 124, .28) 47%, rgba(235, 195, 154, .62) 50%, rgba(211, 159, 112, .4) 53%, transparent 64%);
+  }
+}
+
+/* Final type scale: labels stay compact, while supporting copy remains easy to read. */
+body .studio-page :is(
+  .studio-hero .eyebrow, .studio-path-label, .studio-home-course-purchase > span,
+  .studio-home-course-requirement, .studio-scene-cue, .portfolio-index,
+  .portfolio-tabs button, .portfolio-explanation li > span,
+  .portfolio-stack > span, .portfolio-browser > div > span,
+  .service-list article > span, .stack-list > span, .stack-list > span > i,
+  .learn-card > span, .contact-note, .home-transition-caption,
+  .hero-proof, .studio-mobile-choices a
+) {
+  font-size: 14px !important;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .72);
+}
+
+/* Keep the two first-screen choices inside the phone viewport. */
+body .site-language-bar--home {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
+  min-width: 0;
+}
+
+body .studio-page {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+body .studio-page .studio-hero,
+body .studio-page .studio-paths,
+body .studio-page .studio-path {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+body .studio-page .studio-hero,
+body .studio-page .studio-paths {
+  width: 100%;
+}
+
+body .studio-page .studio-paths {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body .studio-page .studio-path > :is(.studio-path-label, h2, p, .studio-home-course-purchase, a) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+body .studio-page :is(
+  .studio-path > p, .studio-hero-heading > p:last-child,
+  .portfolio-heading > p, .portfolio-explanation > p,
+  .portfolio-project-copy > p, .portfolio-project-copy li > span,
+  .service-list article > p, .learn-card > p,
+  .learn > div > p:not(.eyebrow), .contact > .project-brief
+) {
+  font-size: 16px !important;
+  line-height: 1.6;
+  color: #dedbd4 !important;
+}
+
+body .course-sales :is(
+  .course-sales-nav, .course-sales-footer, .course-sales-meta,
+  .course-sales-hero-price > span, .course-sales-hero-tax,
+  .course-sales-device-note, .course-sales-buy-row > span,
+  .course-sales-outcome-grid span, .course-sales-module-list article > span,
+  .course-sales-module-lessons li > span, .course-sales-module-lessons li small,
+  .course-sales-module-lessons summary, .course-sales-faq-list summary
+) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+body .course-sales :is(
+  .course-sales-lead, .course-sales-brief, .course-sales-module-list p,
+  .course-sales-module-lessons li strong, .course-sales-access li,
+  .course-sales-result-copy > p, .course-sales-purchase > p,
+  .course-sales-faq-list details p, .course-sales-format
+) {
+  font-size: 16px !important;
+  line-height: 1.6;
+}
+
+body .course-page :is(.course-nav, .course-nav-cta, .course-actions > span,
+  .course-note, .proof-row span, .course-marquee, .course-footer,
+  .module > span, .course-example-link),
+body .academy-page :is(.academy-nav, .academy-footer, .roadmap-head,
+  .progress-summary span, .academy-module-title > span, .academy-lesson > span,
+  .academy-lesson time, .lesson-side-list span),
+body .lesson-page :is(.lesson-nav, .lesson-nav > span, .prompt-hint,
+  .lesson-brief dt, .lesson-brief dd, .lesson-block li::before,
+  .lesson-actions li::before, .technical-guide small, .technical-guide em,
+  .technical-guide-visual figcaption, .lesson-example span, .course-trust span,
+  .next-lesson > span),
+body .account-page :is(.account-footer, .account-form-card small,
+  .account-note, .account-terms-links, .account-eyebrow, .account-badge,
+  .account-sync-note, .payment-options small),
+body .course-example :is(.ce-header-link, .ce-eyebrow, .ce-draft-label,
+  .ce-draft-kicker, .ce-site-index, .ce-mini-label, .ce-footer,
+  .ce-review-list small) {
+  font-size: 14px !important;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  body .studio-page :is(
+    .studio-path > p, .studio-hero-heading > p:last-child,
+    .studio-home-course-requirement, .portfolio-heading > p,
+    .portfolio-explanation > p, .portfolio-project-copy > p,
+    .portfolio-project-copy li > span, .service-list article > p,
+    .learn-card > p, .learn > div > p:not(.eyebrow),
+    .contact > .project-brief
+  ),
+  body .course-sales :is(
+    .course-sales-lead, .course-sales-brief, .course-sales-device-note,
+    .course-sales-module-list p, .course-sales-module-lessons li strong,
+    .course-sales-access li, .course-sales-result-copy > p,
+    .course-sales-purchase > p, .course-sales-faq-list details p,
+    .course-sales-faq-list summary, .course-sales-format
+  ),
+  body .course-page .module p,
+  body .academy-page :is(.academy-lesson p, .academy-module-title p),
+  body .lesson-page :is(.lesson-content p, .lesson-block li, .lesson-actions li),
+  body .account-page :is(.account-panel p, .account-form-card p) {
+    font-size: 16px !important;
+    line-height: 1.6;
+  }
+}
+
+/* Final readability floor for labels, captions and helper copy. */
+body :is(.studio-page, .course-sales, .course-page, .academy-page,
+  .lesson-page, .first-lesson, .account-page, .course-example)
+  :is(small, time, figcaption, label, summary, dt, dd, footer,
+    [role="status"], [class*="eyebrow"], [class*="meta"],
+    [class*="label"], [class*="caption"], [class*="index"],
+    [class*="note"], [class*="hint"], [class*="badge"],
+    [class*="kicker"], [class*="requirement"], [class*="trust"]),
+body :is(.studio-page, .course-sales, .course-page, .academy-page,
+  .lesson-page, .first-lesson, .account-page, .course-example)
+  :is(nav a, button, .complete-button) {
+  font-size: 15px !important;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+body .studio-page :is(.studio-scene-cue, .studio-home-course-purchase > span,
+  .studio-home-course-requirement, .portfolio-explanation li > span,
+  .portfolio-stack > span, .portfolio-browser > div > span,
+  .service-list article > span, .stack-list > span, .learn-card > span,
+  .hero-proof, .contact-note, .home-transition-caption),
+body .course-sales :is(.course-sales-meta, .course-sales-buy-row > span,
+  .course-sales-hero-price > span, .course-sales-outcome-grid span,
+  .course-sales-module-list article > span,
+  .course-sales-module-lessons li > span,
+  .course-sales-module-lessons li small),
+body .course-page :is(.course-actions > span, .proof-row span,
+  .module > span, .course-note, .next-lesson > span),
+body .academy-page :is(.academy-module-title > span,
+  .academy-lesson > span, .academy-lesson time, .lesson-side-list span,
+  .progress-summary span),
+body .lesson-page :is(.workspace-heading > span, .workspace-steps i,
+  .technical-guide li > span, .lesson-example span, .course-trust span,
+  .lesson-nav > span, .lesson-video small, .next-lesson > span),
+body .account-page :is(.account-eyebrow, .account-badge,
+  .account-sync-note, .payment-options small),
+body .course-example :is(.ce-review-list article > span,
+  .ce-issues article > span, .ce-your-turn li > span) {
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+body :is(.studio-page, .course-sales, .course-page, .academy-page,
+  .lesson-page, .first-lesson, .account-page, .course-example)
+  p:not(.eyebrow):not(.portfolio-index):not(.studio-path-label):not(.studio-scene-cue):not(.contact-note) {
+  font-size: 16px !important;
+  line-height: 1.65;
+}
+
+body .studio-page :is(.portfolio-stack, .portfolio-index, .contact-note,
+  .home-transition-caption, .hero-proof, .service-list article > span,
+  .stack-list > span, .stack-list > span > i) {
+  color: rgba(241, 238, 232, .92) !important;
+}
+
+body .course-sales :is(.course-sales-outcome-grid span,
+  .course-sales-module-list article > span,
+  .course-sales-module-lessons li > span,
+  .course-sales-module-lessons li small,
+  .course-sales-faq-list details p, .course-sales-buy > p),
+body .academy-page :is(.academy-module-title p, .academy-lesson p,
+  .academy-lesson time, .lesson-side-list a),
+body .lesson-page :is(.lesson-side-list a, .lesson-summary,
+  .lesson-teach p, .technical-guide em),
+body .account-page :is(.account-form-card small, .account-note,
+  .account-panel small, .account-empty, .account-orders small),
+body .first-lesson :is(.fl-note, .fl-brief-grid small,
+  .fl-guide-step p, .screen-detail-copy p, .screen-practice p,
+  .fl-real-work p, .screen-caption),
+body .course-example :is(.ce-issues p, .ce-review-list p,
+  .ce-review-list small, .ce-site-bottom p) {
+  color: #cbc7bf !important;
+}
+
+/* Supporting copy in the worked example must stay readable on dark panels. */
+body .course-example .ce-site :is(.ce-mini-label,
+  .ce-process-grid article > b, .ce-site-bar nav a) {
+  color: var(--cinema-copper) !important;
+}
+
+body .course-example .ce-site :is(.ce-process-grid p,
+  .ce-faq details p, .ce-contact p:last-child) {
+  color: #cbc7bf !important;
+}
+
+body .site-language-bar,
+body .site-language-bar a,
+body .account-page a {
+  font-size: 15px !important;
+  line-height: 1.55;
+}
+
+body .lesson-page .technical-guide em {
+  color: #dfbd98 !important;
+}
+
+/* Keep the desktop type scale while letting phone rules win cleanly. */
+html body .studio-page.home-motion .eyebrow,
+html body .studio-page.home-motion .studio-path-label,
+html body .studio-page.home-motion .studio-home-course-purchase > span,
+html body .studio-page.home-motion .studio-home-course-requirement,
+html body .studio-page.home-motion .studio-scene-cue,
+html body .studio-page.home-motion .portfolio-index,
+html body .studio-page.home-motion .portfolio-tabs button,
+html body .studio-page.home-motion .portfolio-explanation li,
+html body .studio-page.home-motion .portfolio-explanation li > span,
+html body .studio-page.home-motion .portfolio-browser > div > span,
+html body .studio-page.home-motion .portfolio-project-copy > span,
+html body .studio-page.home-motion .portfolio-stack > span,
+html body .studio-page.home-motion .stack-list > span,
+html body .studio-page.home-motion .service-list article > span,
+html body .studio-page.home-motion .service-list li,
+html body .studio-page.home-motion .learn-card > span,
+html body .studio-page.home-motion .intro-course-link,
+html body .studio-page.home-motion .cta-primary,
+html body .studio-page.home-motion .contact-note,
+html body .studio-page.home-motion .home-transition-caption,
+html body .studio-page.home-motion .intro-meta > span,
+html body .studio-page.home-motion .hero-proof,
+html body .studio-page.home-motion footer,
+html body .studio-page.home-motion footer > span,
+html body .studio-page.home-motion footer a {
+  font-size: 15px !important;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+html body .studio-page.home-motion .nav.nav--home .nav-links a,
+html body .studio-page.home-motion .nav.nav--home .nav-cta {
+  font-size: 15px !important;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+html body .studio-page.home-motion :is(
+  .studio-path > p,
+  .studio-hero-heading > p:last-child,
+  .intro.course-intro-home > p:first-child,
+  .portfolio-heading > p,
+  .portfolio-explanation > p,
+  .portfolio-project-copy > p,
+  .portfolio-project-copy li > span,
+  .service-list article > p,
+  .learn-card > p,
+  .learn > div > p:not(.eyebrow),
+  .contact > .project-brief
+) {
+  font-size: 16px !important;
+  line-height: 1.65;
+}
+
+html body .course-sales.course-sales :is(
+  .eyebrow,
+  .course-sales-result-preview > span,
+  .course-sales-meta,
+  .course-sales-buy-row > span,
+  .course-sales-hero-price > span,
+  .course-sales-outcome-grid span,
+  .course-sales-module-list article > span,
+  .course-sales-module-lessons li > span,
+  .course-sales-module-lessons li small,
+  .course-sales-device-note,
+  .course-sales-faq-list summary,
+  .course-sales-nav a,
+  .course-sales-footer a
+) {
+  font-size: 15px !important;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* Replace the orbit motif with a moving editorial light path and a framed signal. */
+.studio-page .home-transition-curtain {
+  inset: 0;
+  background: linear-gradient(112deg, transparent 28%, rgba(201, 161, 124, .025) 43%, rgba(226, 184, 143, .2) 50%, rgba(201, 161, 124, .04) 57%, transparent 72%);
+  transform: none;
+}
+
+.studio-page .home-transition-graphic {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  mix-blend-mode: normal;
+}
+
+.studio-page .home-route-rail {
+  fill: none;
+  stroke: rgba(201, 161, 124, .16);
+  stroke-width: 1;
+  stroke-dasharray: 2 11;
+  vector-effect: non-scaling-stroke;
+}
+
+.studio-page .home-route-rail-secondary { stroke: rgba(241, 218, 193, .11); }
+
+.studio-page .home-signal-path {
+  stroke-width: 2.2;
+  filter: none;
+}
+
+.studio-page .home-signal-marker {
+  width: clamp(98px, 14vw, 190px);
+  aspect-ratio: 1.72;
+  border: 0;
+  border-radius: 2px;
+  background: linear-gradient(105deg, transparent 20%, rgba(226, 184, 143, .035) 50%, transparent 80%);
+  box-shadow: none;
+  transform: translate3d(calc(var(--home-current-signal-x, 50vw) - 50vw), calc(var(--home-current-signal-y, 50vh) - 50vh), 0) translate(-50%, -50%) scale(.92);
+  will-change: transform, opacity;
+}
+
+.studio-page .home-signal-marker::before {
+  inset: 0;
+  border: 1px solid rgba(226, 184, 143, .54);
+  border-radius: 2px;
+  clip-path: polygon(0 0, 43% 0, 46% 7%, 54% 7%, 57% 0, 100% 0, 100% 43%, 93% 46%, 93% 54%, 100% 57%, 100% 100%, 57% 100%, 54% 93%, 46% 93%, 43% 100%, 0 100%, 0 57%, 7% 54%, 7% 46%, 0 43%);
+  transform: none;
+}
+
+.studio-page .home-signal-marker::after {
+  inset: 7px 50%;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(180deg, transparent, rgba(245, 220, 193, .68), transparent);
+  transform: translateX(-50%);
+}
+
+.studio-page .home-signal-marker i {
+  width: 3px;
+  height: 3px;
+  background: #f6dfc4;
+  box-shadow: 0 0 11px 4px rgba(246, 223, 196, .45);
+}
+
+.studio-page .home-transition-caption { text-shadow: none; }
+
+.studio-page .services .service-list article::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 38%;
+  height: 1px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-115%);
+  background: linear-gradient(90deg, transparent, rgba(243, 213, 182, .82), transparent);
+  transition: opacity .18s ease, transform .86s cubic-bezier(.16, 1, .3, 1);
+}
+
+.studio-page.home-motion .services .service-list article.home-visible::before {
+  opacity: .85;
+  transform: translateX(285%);
+}
+
+.studio-page .contact::after {
+  width: min(78vw, 980px);
+  height: min(62%, 610px);
+  aspect-ratio: auto;
+  border: 1px solid rgba(227, 188, 151, .36);
+  border-radius: 3px;
+  background: linear-gradient(115deg, rgba(201, 161, 124, .035), transparent 45%, rgba(201, 161, 124, .025));
+  box-shadow: inset 0 0 54px rgba(201, 161, 124, .035);
+  clip-path: polygon(0 0, 46% 0, 47% 1%, 53% 1%, 54% 0, 100% 0, 100% 47%, 99% 48%, 99% 52%, 100% 53%, 100% 100%, 54% 100%, 53% 99%, 47% 99%, 46% 100%, 0 100%, 0 53%, 1% 52%, 1% 48%, 0 47%);
+  opacity: var(--home-contact-frame-opacity, .3);
+  transform: translate3d(-50%, -50%, 0) scale(var(--home-contact-frame-scale, .96));
+}
+
+@media (max-width: 760px) {
+  /* A compact phone scale: concise labels, calm body copy, unchanged desktop type. */
+  html body .studio-page.home-motion :is(
+    .studio-hero .eyebrow, .studio-path-label, .studio-home-course-purchase > span,
+    .studio-home-course-requirement, .studio-scene-cue, .portfolio-index,
+    .portfolio-tabs button, .portfolio-explanation li > span,
+    .portfolio-browser > div > span,
+    .service-list article > span, .stack-list > span > i, .learn-card > span,
+    .contact-note, .home-transition-caption, .hero-proof
+  ) {
+    font-size: 12px !important;
+    line-height: 1.45;
+    letter-spacing: .035em;
+  }
+
+  html body .studio-page.home-motion .portfolio-stack > span {
+    font-size: 13px !important;
+    line-height: 1.45;
+  }
+
+  html body .studio-page.home-motion :is(
+    .studio-path > p, .studio-hero-heading > p:last-child,
+    .portfolio-heading > p, .portfolio-explanation > p,
+    .portfolio-project-copy > p, .portfolio-project-copy li > span,
+    .service-list article > p, .learn-card > p,
+    .learn > div > p:not(.eyebrow), .contact > .project-brief
+  ) {
+    font-size: 16px !important;
+    line-height: 1.55;
+  }
+
+  html body .studio-page.home-motion :is(
+    .studio-path-course > a.studio-home-course-overview,
+    .studio-path-services > a,
+    .studio-home-course-purchase .course-sales-buy button,
+    .nav.nav--home .nav-cta
+  ) {
+    font-size: 13px !important;
+  }
+
+  .studio-page .studio-hero-heading > .eyebrow,
+  .studio-page .studio-hero-heading > h1,
+  .studio-page .studio-hero-heading > p:last-child,
+  .studio-page .studio-paths,
+  .studio-page .studio-scene-cue {
+    filter: none !important;
+  }
+
+  .studio-page > .studio-film-backdrop {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .studio-page .studio-film-frame {
+    transform: scale(1.06) !important;
+    transform-origin: 76% 50% !important;
+  }
+
+  .studio-page .studio-film-grid { transform: none !important; }
+
+  .studio-page .home-cinematic-transition {
+    contain: none;
+  }
+
+  .studio-page .home-transition-curtain {
+    background: linear-gradient(112deg, transparent 34%, rgba(201, 161, 124, .015) 45%, rgba(226, 184, 143, .11) 50%, rgba(201, 161, 124, .02) 56%, transparent 66%);
+  }
+
+  .studio-page .home-signal-path { stroke-width: 1.8; }
+
+  .studio-page .home-signal-marker {
+    width: clamp(84px, 24vw, 138px);
+    transform: translate3d(calc(var(--home-current-signal-x, 50vw) - 50vw), calc(var(--home-current-signal-y, 50vh) - 50vh), 0) translate(-50%, -50%) scale(.86);
+  }
+
+  .studio-page .home-signal-marker::before { border-color: rgba(226, 184, 143, .42); }
+  .studio-page .home-signal-marker::after { inset-block: 8px; }
+
+  .studio-page .portfolio-flagship,
+  .studio-page .portfolio-secondary > article {
+    will-change: auto;
+    backface-visibility: visible;
+  }
+
+  .studio-page.home-motion .portfolio-secondary > article.home-reveal:not(.home-visible) {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(.97);
+    transition: opacity .5s ease, transform .72s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .studio-page.home-motion .portfolio-secondary > article.home-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .studio-page.home-motion .services .section-top > *.home-reveal:not(.home-visible),
+  .studio-page.home-motion .services .service-list article.home-reveal:not(.home-visible) {
+    opacity: 0;
+    transform: translate3d(-14px, 0, 0);
+    transition: opacity .45s ease, transform .62s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .studio-page.home-motion .services .section-top > *.home-visible,
+  .studio-page.home-motion .services .service-list article.home-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .studio-page .stack-list::after {
+    left: 50%;
+    top: 0;
+    width: clamp(42px, 13vw, 66px);
+    height: 100%;
+    border-radius: 0;
+    opacity: .72;
+    background: linear-gradient(90deg, transparent, rgba(226, 184, 143, .16), rgba(245, 220, 193, .32), rgba(226, 184, 143, .12), transparent);
+    transform: translate3d(calc(var(--home-stack-x, 0%) - 50%), 0, 0);
+    will-change: auto;
+  }
+
+  .studio-page .stack-list::before {
+    height: 1px;
+    box-shadow: none;
+  }
+
+  .studio-page .stack-list > span {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    transform: none;
+  }
+
+  .studio-page.home-motion .stack-list > span.home-reveal:not(.home-visible) {
+    opacity: .48;
+    transform: translate3d(-8px, 0, 0);
+    transition: opacity .38s ease, transform .52s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .studio-page.home-motion .stack-list > span.home-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .studio-page .contact { padding-top: 104px; }
+
+  .studio-page .contact::after {
+    width: 88vw;
+    height: 72%;
+    box-shadow: inset 0 0 34px rgba(201, 161, 124, .028);
+  }
+
+  .studio-page .contact > .eyebrow,
+  .studio-page .contact > h2,
+  .studio-page .contact > a,
+  .studio-page .contact > .project-brief,
+  .studio-page .contact > .contact-note {
+    filter: none;
+  }
+}
+
+/* Phone finishing pass: opaque fixed navigation and proportionate section titles. */
+@media (max-width: 760px) {
+  html body .site-language-bar--home,
+  html body .studio-page .nav.nav--home {
+    background-color: #090b0a !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  html body .studio-page .stack > h2 {
+    font-size: clamp(38px, 10vw, 46px) !important;
+    line-height: .98;
+  }
+
+  html body .studio-page .contact > h2 {
+    font-size: clamp(42px, 11vw, 52px) !important;
+    line-height: .94;
+  }
+
+  html body .studio-page .contact > .contact-note {
+    font-size: 13px !important;
+    line-height: 1.5;
+  }
+}
+
+/* The stack content sits comfortably inside its ruled frame; the rules still run edge to edge. */
+.studio-page .stack-list > span { padding-inline: clamp(16px, 2vw, 30px); }
+.studio-page #contact { scroll-margin-top: 0 !important; }
+
+/* Four separate scroll-scrubbed motion scenes: aperture, scan, circuit, then portal. */
+.studio-page .home-cinematic-transition { opacity: 1 !important; }
+.studio-page .home-transition-graphic {
+  overflow: visible;
+  transform: none !important;
+  will-change: auto;
+}
+.studio-page .home-transition-curtain {
+  background: linear-gradient(112deg, transparent 27%, rgba(201,161,124,.035) 43%, rgba(226,184,143,.34) 50%, rgba(201,161,124,.055) 57%, transparent 74%);
+}
+.studio-page .home-motion-scene {
+  fill: none;
+  stroke: rgba(217,177,139,.72);
+  stroke-width: 1.35;
+  stroke-linecap: square;
+  stroke-linejoin: bevel;
+  vector-effect: non-scaling-stroke;
+  opacity: var(--home-scene-energy, 0);
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  pointer-events: none;
+}
+.studio-page .motion-scene-draw {
+  stroke-dasharray: 1000;
+}
+.studio-page .home-motion-scene-aperture {
+  opacity: var(--home-scene-aperture-energy, 0);
+  transform: scale(var(--home-scene-aperture-scale, .74));
+  stroke: rgba(232,193,159,.62);
+}
+.studio-page .home-motion-scene-aperture .motion-scene-draw { stroke-dashoffset: var(--home-scene-aperture-dash, 1000); }
+.studio-page .motion-scene-aperture-inner { stroke: rgba(245,220,193,.86); stroke-width: 1.05; }
+.studio-page .motion-scene-aperture-slit { stroke: rgba(217,177,139,.34); stroke-width: .8; }
+.studio-page .motion-scene-aperture-ray { stroke: rgba(245,220,193,.66); stroke-width: 2.1; }
+.studio-page .home-motion-scene-scan { opacity: var(--home-scene-scan-energy, 0); }
+.studio-page .motion-scene-scan-grid { stroke: rgba(217,177,139,.2); stroke-width: .8; stroke-dasharray: 2 10; }
+.studio-page .motion-scene-scan-track { stroke: rgba(217,177,139,.38); stroke-width: 1; }
+.studio-page .motion-scene-scan-beam { transform: translateX(var(--home-scene-scan-shift, -54vw)); }
+.studio-page .motion-scene-scan-beam > path:first-child { stroke: rgba(217,177,139,.44); stroke-width: 1; }
+.studio-page .motion-scene-scan-core { stroke: url(#home-signal-gradient); stroke-width: 3; }
+.studio-page .home-motion-scene-circuit { opacity: var(--home-scene-circuit-energy, 0); }
+.studio-page .home-motion-scene-circuit > path:first-child { stroke: rgba(245,220,193,.92); stroke-width: 2.1; }
+.studio-page .home-motion-scene-circuit .motion-scene-draw { stroke-dashoffset: var(--home-scene-circuit-dash, 1000); }
+.studio-page .motion-scene-circuit-branch { stroke: rgba(217,177,139,.58); stroke-width: 1.2; }
+.studio-page .home-motion-scene-circuit circle { fill: #11110f; stroke: #f3d7b5; stroke-width: 1.4; }
+.studio-page .home-motion-scene-portal {
+  opacity: var(--home-scene-portal-energy, 0);
+  transform: scale(var(--home-scene-portal-scale, .72));
+  stroke: rgba(217,177,139,.76);
+}
+.studio-page .home-motion-scene-portal .motion-scene-draw { stroke-dashoffset: var(--home-scene-portal-dash, 1000); }
+.studio-page .motion-scene-portal-inner { stroke: rgba(245,220,193,.44); stroke-width: .9; }
+.studio-page .motion-scene-portal-beam { stroke: url(#home-signal-gradient); stroke-width: 1.8; }
+.studio-page .motion-scene-portal-core { stroke: rgba(255,235,210,.94); stroke-width: 2.6; }
+
+@media (max-width: 760px) {
+  .studio-page .stack-list > span { padding-inline: 16px; }
+  .studio-page .contact { scroll-margin-top: 0 !important; }
+}

@@ -1,0 +1,1 @@
+const fs=require('fs');const s=JSON.parse(fs.readFileSync('lib/i18n/ru.json','utf8'));const entries=Object.entries(s);console.log(JSON.stringify(entries.slice(0,38),null,2));console.log(JSON.stringify(entries.filter(([k])=>k.length>300).slice(0,8),null,2));

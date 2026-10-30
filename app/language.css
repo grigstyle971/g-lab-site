@@ -1,0 +1,12 @@
+.site-language-bar { position: sticky; top: 0; z-index: 80; display: flex; justify-content: flex-end; align-items: center; gap: 14px; padding: 7px 3.2vw; min-height: 44px; background: #f4f3eb; border-bottom: 1px solid #cbd2c4; color: #243d30; font: 12px Arial, sans-serif; }
+.site-language-bar nav { display: flex; gap: 4px; }
+.site-language-bar a { padding: 7px 11px; border-radius: 6px; font-weight: 700; }
+.site-language-bar a[aria-current="true"] { background: #244638; color: #fff; }
+.site-language-bar a:focus-visible { outline: 2px solid #b3431d; outline-offset: 2px; }
+.site-language-note { max-width: 1000px; margin: 20px auto; padding: 15px 24px; border-left: 3px solid #809b72; background: #edf2e6; color: #284733; font-size: 14px; line-height: 1.7; }
+html[lang="ru"] h1, html[lang="ru"] h2 { letter-spacing: -.025em; }
+html[lang="ru"] .hero h1 { font-size: clamp(44px,6vw,96px); line-height: 1.03; }
+html[lang="ru"] .fl-toc { top: 65px; }
+html[lang="ru"] .first-lesson [id], .first-lesson [id] { scroll-margin-top: 66px; }
+@media(max-width:600px){.site-language-bar {position:relative;min-height:38px;padding:3px 14px;gap:8px;font-size:12px}.site-language-bar a{padding:4px 8px}.site-language-note {margin: 12px; padding: 12px}}
+.not-found-page { max-width: 800px; margin: 12vh auto; padding: 30px; }

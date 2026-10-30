@@ -1,0 +1,1 @@
+(async()=>{const q='Open the Owner selector. Choose your personal account for this course project.';const u=new URL('https://translate.googleapis.com/translate_a/single');for(const [k,v]of Object.entries({client:'gtx',sl:'en',tl:'ru',dt:'t',q}))u.searchParams.set(k,v);const r=await fetch(u);console.log(r.status);console.log((await r.json())[0]);})();

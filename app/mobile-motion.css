@@ -1,0 +1,26 @@
+/* The phone layout is intentionally not a shrunken desktop hero. */
+@media(max-width:760px){
+  .nav{position:relative!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  .nav:after{display:none!important}
+  .hero{display:flex!important;flex-direction:column;min-height:0!important;padding:58px 20px calc(28px + env(safe-area-inset-bottom))!important;overflow:hidden!important}
+  .hero-copy{width:100%;max-width:none!important;align-self:auto!important;z-index:3!important}
+  .course-home-copy h1{font-size:clamp(54px,16vw,68px)!important;line-height:.89!important;margin:18px 0 23px!important}
+  .hero-text{max-width:100%!important;font-size:16px!important;line-height:1.5!important}
+  .hero-actions{width:100%;display:grid!important;grid-template-columns:1fr 1fr;gap:10px!important;margin-top:25px!important}
+  .cta-primary,.cta-secondary{min-height:58px;justify-content:center!important;gap:9px!important;padding:14px 12px!important;text-align:center}
+  .hero-proof{margin:21px 0 0!important;font-size:8px!important;letter-spacing:.55px!important}
+  .hero-art{position:relative!important;inset:auto!important;order:2;width:calc(100% + 40px)!important;height:410px!important;margin:28px -20px 0!important;opacity:1!important;overflow:hidden!important}
+  .course-home-window{width:min(78%,360px)!important;right:10%!important;top:18%!important;transform:rotate(3deg)!important;animation:mobile-product-enter .95s cubic-bezier(.16,1,.3,1) .16s both!important}
+  .course-home-window section{padding:28px 22px!important}.course-home-window h2{font-size:34px!important}.course-home-window small{margin-top:25px!important}
+  .orb-one{width:105vw!important;height:105vw!important;right:-30vw!important;top:-24vw!important}.orb-two{width:58vw!important;height:58vw!important;right:14%!important;bottom:-15vw!important}
+  .hero-tag{display:grid!important;left:8%!important;bottom:10%!important;width:86px!important;height:86px!important;animation:hero-tag-orbit 8s ease-in-out infinite!important}
+  .hero-footer{position:relative!important;order:3;left:auto!important;right:auto!important;bottom:auto!important;margin-top:2px;padding-top:13px;border-top:1px solid #6d625944;display:grid!important;grid-template-columns:1fr 1fr;gap:8px;font-size:7px!important;line-height:1.4}.hero-footer span:last-child{display:none}
+  .course-home-art:after{display:none!important}.service-list article:hover{transform:none!important;padding-left:0!important}
+}
+@keyframes mobile-product-enter{0%{opacity:0;transform:translateY(54px) rotate(8deg) scale(.9)}100%{opacity:1;transform:translateY(0) rotate(3deg) scale(1)}}
+@media(min-width:761px){.course-home-window{animation:product-card-enter 1s cubic-bezier(.16,1,.3,1) .25s both}.hero-art .grid{animation:grid-drift 18s linear infinite}.case-live-screen{animation:case-card-arrive .9s cubic-bezier(.16,1,.3,1) both}.case-pill-one{animation:pill-float-one 5s ease-in-out infinite}.case-pill-two{animation:pill-float-two 6.5s ease-in-out .4s infinite}}
+@keyframes product-card-enter{0%{opacity:0;transform:translate(30px,48px) rotate(9deg) scale(.92)}100%{opacity:1;transform:rotate(4deg) scale(1)}}
+@keyframes grid-drift{from{background-position:0 0,0 0}to{background-position:58px 58px,58px 58px}}
+@keyframes case-card-arrive{0%{opacity:0;transform:translate(-50%,-35%) rotate(-8deg) scale(.92)}100%{opacity:1;transform:translate(-50%,-43%) rotate(-3deg) scale(1)}}
+@keyframes pill-float-one{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-9px) rotate(3deg)}}
+@keyframes pill-float-two{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(10px) rotate(-3deg)}}

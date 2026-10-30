@@ -1,0 +1,23 @@
+"use client";
+import { useEffect, useState } from "react";
+import { useLocale } from "./LanguageProvider";
+import { lessonActivities, type Bilingual } from "../lib/lesson-activities";
+export type ActivitySnapshot={choice:number|null;order:number[]};
+export function LessonActivities({slug,onPassChange,onSnapshotChange,restore}:{slug:string;onPassChange:(passed:boolean)=>void;onSnapshotChange?:(value:ActivitySnapshot)=>void;restore?:ActivitySnapshot}){
+ const locale=useLocale(),t=(value:Bilingual)=>value[locale==='ru'?1:0],ru=locale==='ru',data=lessonActivities[slug];
+ const [choice,setChoice]=useState<number|null>(null),[order,setOrder]=useState([1,2,0]),[checked,setChecked]=useState(false),[ready,setReady]=useState(false);
+ const revision = ["codex-workflow", "project-context", "editing-with-codex", "computer-workspace", "nextjs-foundation", "client-space"].includes(slug) ? "v2" : "v1";
+ const key=`g-lab-activities-${slug}-${revision}`;
+ useEffect(()=>{try{const raw=JSON.parse(localStorage.getItem(key)||'null');if(raw){if(Number.isInteger(raw.choice)&&raw.choice>=0&&raw.choice<data.options.length)setChoice(raw.choice);if(Array.isArray(raw.order)&&raw.order.length===3&&new Set(raw.order).size===3&&raw.order.every((n:unknown)=>typeof n==='number'&&Number.isInteger(n)&&n>=0&&n<3))setOrder(raw.order);setChecked(raw.checked===true);}}catch{}setReady(true);},[key,data]);
+ useEffect(()=>{if(restore){if(restore.choice===null||(Number.isInteger(restore.choice)&&restore.choice>=0&&restore.choice<data.options.length))setChoice(restore.choice);if(restore.order.length===3&&new Set(restore.order).size===3&&restore.order.every(n=>Number.isInteger(n)&&n>=0&&n<3))setOrder(restore.order);setChecked(false);}},[restore,data]);
+ useEffect(()=>{if(ready)onSnapshotChange?.({choice,order});},[ready,choice,order,onSnapshotChange]);
+ const scenarioPassed=choice===data.correct,orderPassed=order.every((n,i)=>n===i),passed=checked&&scenarioPassed&&orderPassed;
+ useEffect(()=>{onPassChange(ready&&passed);if(ready)try{localStorage.setItem(key,JSON.stringify({choice,order,checked}));}catch{}},[key,choice,order,checked,ready,passed,onPassChange]);
+ function move(index:number,direction:number){const next=[...order],target=index+direction;[next[index],next[target]]=[next[target],next[index]];setOrder(next);setChecked(false);}
+ return <section className="lesson-activities" id="interactive-practice" aria-labelledby="activities-heading">
+ <p className="fl-kicker">{ru?'ТРЕНАЖЁР / ПРИМЕНИТЕ ЗНАНИЯ':'PRACTICE LAB / APPLY WHAT YOU LEARNED'}</p><h2 id="activities-heading">{ru?'Попробуйте решить сами.':'Try it yourself.'}</h2><p>{ru?'Разберите ситуацию и соберите порядок действий. После проверки вы увидите объяснение.':'Solve the situation and arrange the steps. Check your answers to see the explanation.'}</p>
+ <fieldset className="activity-scenario"><legend><span>01</span> {ru?'Как вы поступите?':'What would you do?'}</legend><p>{t(data.scenario)}</p>{data.options.map((option,i)=><label className={choice===i?'is-selected':''} key={option[0]}><input type="radio" name={`activity-${slug}`} checked={choice===i} onChange={()=>{setChoice(i);setChecked(false);}}/><span>{t(option)}</span></label>)}{checked&&<p className={scenarioPassed?'pass':'fail'} role="status"><strong>{scenarioPassed?(ru?'Верно. ':'Correct. '):(ru?'Попробуйте ещё раз. ':'Try again. ')}</strong>{t(data.reason)}</p>}</fieldset>
+ <div className="activity-order"><h3><span>02</span> {ru?'Что сначала, что потом?':'What comes first?'}</h3><p>{ru?'Кнопками ↑ и ↓ расположите действия в правильном порядке.':'Use ↑ and ↓ to put these actions in the correct order.'}</p><ol>{order.map((step,i)=><li key={step} data-step={step}><span className="activity-position">{i+1}</span><p>{t(data.order[step])}</p><div><button type="button" disabled={i===0} onClick={()=>move(i,-1)} aria-label={`${ru?'Выше':'Move up'}: ${t(data.order[step])}`}>↑</button><button type="button" disabled={i===order.length-1} onClick={()=>move(i,1)} aria-label={`${ru?'Ниже':'Move down'}: ${t(data.order[step])}`}>↓</button></div></li>)}</ol>{checked&&<p className={orderPassed?'pass':'fail'} role="status"><strong>{orderPassed?(ru?'Порядок верный. ':'Correct order. '):(ru?'Порядок пока неверный. ':'Not in the right order yet. ')}</strong>{t(data.orderReason)}</p>}</div>
+ <div className="activity-footer"><button type="button" disabled={!ready} onClick={()=>setChecked(true)}>{ru?'Проверить задания':'Check activities'}</button><span role="status">{checked?(passed?(ru?'✓ Оба задания выполнены':'✓ Both activities complete'):(ru?'Исправьте ответы и проверьте снова':'Adjust your answers and check again')):(ru?'Можно пробовать несколько раз':'You can try more than once')}</span></div>
+ </section>
+}

@@ -1,0 +1,96 @@
+/* Lessons in the G-lab paper style. The legacy lesson CSS reads the --cinema-* palette,
+   so most of it flips by redefining those variables; the rest are hard-coded dark colours. */
+.first-lesson.gl{
+  --cinema-bg:#F1EFE8;--cinema-panel:#fff;--cinema-raised:#F7F5EF;--cinema-copper:#C2341B;--cinema-gold:#C2341B;
+  --cinema-cream:#141414;--cinema-muted:#5E5A52;--cinema-line:#14141429;--fl-accent:#C2341B;
+  background:var(--paper)!important;color:var(--ink)!important;font-family:var(--gl-body),system-ui,sans-serif!important
+}
+.first-lesson.gl .fl-nav{position:sticky;top:0;z-index:20;background:#F1EFE8e6;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.first-lesson.gl .fl-nav .brand{font:700 22px/1 var(--gl-display),sans-serif;letter-spacing:-.05em;color:var(--ink)}
+.first-lesson.gl .fl-nav .brand span{color:var(--signal-text)!important}
+.first-lesson.gl .fl-header{background:var(--paper);border-bottom:1.5px solid var(--ink)}
+.first-lesson.gl .fl-header::before{display:none}
+.first-lesson.gl .fl-header h1{font-size:clamp(34px,4.6vw,64px);letter-spacing:-.045em}
+.first-lesson.gl .fl-header>p:not(.fl-kicker),.first-lesson.gl .fl-content p{color:var(--mute)}
+.first-lesson.gl .fl-kicker{font-family:var(--gl-mono),monospace!important;letter-spacing:.04em}
+
+/* why it matters + outcome */
+.fl-why{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 28px;max-width:900px}
+.fl-why>div{padding:18px 20px;border:1.5px solid var(--ink);border-radius:14px;background:#fff}
+.fl-why>div:first-child{background:var(--signal);border-color:var(--signal)}
+.fl-why dt{font:500 12px/1.4 var(--gl-mono),monospace;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.fl-why dd{margin:0;font-size:16px;line-height:1.55;font-weight:500}
+
+/* course map */
+.fl-map{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;max-width:900px}
+.fl-map span{display:block;font:500 11px var(--gl-mono),monospace;color:var(--mute);margin-bottom:8px}
+.fl-map ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.fl-map a{display:grid;place-items:center;height:34px;border:1.5px solid var(--ink);border-radius:8px;font:500 12px var(--gl-mono),monospace;color:var(--ink);background:#fff;transition:background .2s,color .2s}
+.fl-map a:hover{background:var(--ink);color:var(--paper)}
+.fl-map a[aria-current="page"]{background:var(--ink);color:var(--paper);box-shadow:0 0 0 3px var(--signal)}
+
+/* buttons */
+.first-lesson.gl button{background:#fff;color:var(--ink);border:1.5px solid var(--ink);border-radius:99px}
+.first-lesson.gl button:hover{background:var(--ink)!important;color:var(--paper)!important;border-color:var(--ink)}
+.first-lesson.gl .fl-primary{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:99px;background:var(--signal)!important;border-color:var(--signal)!important;color:var(--ink)!important;font-weight:600}
+.first-lesson.gl .fl-primary:disabled{opacity:.5}
+
+/* steps */
+.first-lesson.gl .fl-compact-step{border-bottom-color:var(--line)}
+.first-lesson.gl .fl-compact-actions li::marker{color:#C2341B;font-weight:700}
+.first-lesson.gl .fl-compact-result{border-left:0;border-radius:12px;background:#DDF3E6;color:#11603A}
+.first-lesson.gl .fl-compact-result strong{color:#11603A}
+.first-lesson.gl .fl-prompt{background:var(--ink)!important;color:var(--paper)!important;border:0!important;border-radius:14px}
+.first-lesson.gl .fl-prompt :is(strong,summary,pre,p){color:var(--paper)!important}
+.first-lesson.gl .fl-prompt button{background:var(--signal);border-color:var(--signal);color:var(--ink)}
+.first-lesson.gl .fl-prompt summary::marker{color:var(--signal)}
+.first-lesson.gl :is(.fl-compact-placeholder,.fl-compact-troubleshooting p,.fl-compact-completion legend){color:var(--mute)}
+.first-lesson.gl .fl-compact-prompt>.fl-compact-placeholder{color:#C9C4B8}
+.first-lesson.gl .fl-compact-completion{background:#fff;border:1.5px solid var(--ink);border-radius:18px}
+
+/* screenshots were inverted for the old dark theme; show them as they are */
+.first-lesson.gl .fl-screen-clean[data-image-treatment="dark-filter"] :is(.fl-screen-stage>img,.fl-screen-zoom img){filter:none!important}
+.first-lesson.gl :is(.fl-screen-clean,.fl-screen,.screen-card){background:#fff!important;color:var(--ink)!important;border-color:var(--line)!important}
+.first-lesson.gl :is(.fl-screen-clean p,.screen-caption,.screen-detail-copy p,.screen-practice p,.first-lesson .fl-note){color:var(--mute)!important}
+
+@media (max-width:760px){
+  .fl-why{grid-template-columns:1fr}
+  .fl-map{grid-template-columns:repeat(2,1fr)}
+}
+
+/* screen-guide toggles were dark pills in the old theme */
+.first-lesson.gl :is(.screen-choice,.fl-toolbar button,.screen-detail-actions button,.fl-guide-mode button,.fl-guide-navigation button){background:#fff!important;color:var(--ink)!important;border:1.5px solid var(--ink)!important}
+.first-lesson.gl .screen-choice[aria-pressed="true"]{background:var(--signal)!important;border-color:var(--signal)!important}
+.first-lesson.gl .fl-screen-clean .screen-marker{background:var(--signal);color:var(--ink)}
+
+/* course workspace (/learn) */
+.academy-page.gl{--cinema-bg:#F1EFE8;--cinema-panel:#fff;--cinema-raised:#F7F5EF;--cinema-copper:#C2341B;--cinema-cream:#141414;--cinema-muted:#5E5A52;--cinema-line:#14141429;background:var(--paper)!important;color:var(--ink)!important;font-family:var(--gl-body),system-ui,sans-serif!important}
+.academy-page.gl .academy-nav,.academy-page.gl .academy-footer{background:var(--paper)!important;color:var(--ink)!important}
+.academy-page.gl .brand{font:700 22px/1 var(--gl-display),sans-serif;letter-spacing:-.05em;color:var(--ink)}
+.academy-page.gl .brand span{color:var(--signal-text)!important}
+.academy-page.gl .academy-hero{background:var(--paper)!important;color:var(--ink)!important}
+.academy-page.gl .academy-hero::before{display:none}
+.academy-page.gl .academy-hero h1{color:var(--ink)!important;font-size:clamp(48px,7vw,112px);letter-spacing:-.05em}
+.academy-page.gl .academy-hero h1 em{font-style:normal;color:var(--signal-text)!important}
+.academy-page.gl .academy-hero>div:first-child>p:last-of-type,.academy-page.gl .academy-hero p{color:var(--mute)!important}
+.academy-page.gl .eyebrow{font-family:var(--gl-mono),monospace!important;color:#C2341B!important}
+.academy-page.gl .academy-roadmap{background:var(--paper)!important}
+.academy-page.gl .academy-module-title h2{color:var(--ink)!important}
+.academy-page.gl :is(.academy-module-title p,.academy-lesson p,.academy-lesson time,.academy-module-title span){color:var(--mute)!important}
+.academy-page.gl .academy-lesson{background:#fff;border:1.5px solid var(--ink)!important;border-radius:14px;margin-bottom:8px;color:var(--ink)!important}
+.academy-page.gl .academy-lesson:hover{background:var(--ink)!important;color:var(--paper)!important}
+.academy-page.gl .academy-lesson:hover :is(p,time,h3,span){color:var(--paper)!important}
+.academy-page.gl .academy-lesson>span{font-family:var(--gl-mono),monospace;color:#C2341B!important}
+.academy-page.gl .academy-example-link{color:var(--ink)!important;border-color:var(--signal)!important}
+.gl .progress-summary{background:#fff!important;color:var(--ink)!important;border:1.5px solid var(--ink)!important;border-radius:18px;box-shadow:none!important}
+.gl .progress-summary :is(span,p){color:var(--mute)!important}
+.gl .progress-summary b{color:var(--ink)!important;font-family:var(--gl-display),sans-serif}
+.gl .progress-track{background:var(--line)!important}.gl .progress-track i{background:var(--signal)!important}
+.gl .fl-real-work{background:var(--ink)!important;color:var(--paper)!important;border:0!important}
+.gl .fl-real-work>h2{color:var(--paper)!important}
+.gl .fl-real-work>p,.gl .fl-real-work>.fl-note{color:#C9C4B8!important}
+.gl .fl-real-work .fl-kicker{color:#FF8A70!important}
+.gl .fl-real-work article{background:#1F1F1F!important;border:1px solid #F1EFE84d!important;color:var(--paper)!important}
+.gl .fl-real-work article :is(p,.fl-note){color:#C9C4B8!important}
+.gl .fl-real-work article :is(h3,h3 a,strong){color:var(--paper)!important}
+.gl .fl-real-work article small{color:#FF8A70!important}

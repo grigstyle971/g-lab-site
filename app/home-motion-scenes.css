@@ -1,0 +1,150 @@
+/* Transparent sculptures share the page backdrop. */
+.studio-page .motion-film {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: clamp(300px, 30vw, 460px);
+  min-height: 0 !important;
+  margin-block: clamp(-72px, -4vw, -32px);
+  padding: 0 !important;
+  overflow: hidden;
+  isolation: isolate;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  pointer-events: none;
+}
+.studio-page .motion-film__stage {
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0;
+  overflow: visible;
+  perspective: none;
+  transform-style: flat;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 14%, #000 86%, transparent);
+}
+/* The first sculpture joins the homepage copy instead of arriving ahead of it. */
+.studio-page .motion-film--reveal .motion-film__stage {
+  opacity: 0;
+  animation: g-lab-mobile-stage .72s cubic-bezier(.16,1,.3,1) 1.46s both;
+}
+.studio-page.home-motion .motion-film--reveal .motion-film__stage {
+  animation: none;
+  opacity: var(--home-paths-progress, 0);
+  transform: translate3d(0, var(--home-paths-lift, 32px), 0);
+  filter: blur(var(--home-paths-blur, 0px));
+}
+.studio-page.home-motion.home-mobile-sequence .motion-film--reveal .motion-film__stage {
+  opacity: 0;
+  animation: g-lab-mobile-stage .72s cubic-bezier(.16,1,.3,1) 1.46s both !important;
+}
+.studio-page .motion-film__renderer,
+.studio-page .motion-film__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.studio-page .motion-film__canvas {
+  opacity: 0;
+}
+.studio-page .motion-film[data-renderer="webgl"] .motion-film__canvas {
+  opacity: var(--motion-film-visibility, 1);
+}
+.studio-page .motion-film__fallback {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  opacity: var(--motion-film-visibility, 1);
+}
+.studio-page .motion-film__fallback img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  /* The orthographic 3D camera also keeps the sculpture's height constant. */
+  transform: translateX(-50%);
+}
+.studio-page .motion-film[data-renderer="webgl"] .motion-film__fallback { opacity: 0; }
+@media (max-width: 760px) {
+  .studio-page .motion-film { height: 320px; margin-block: -26px; }
+  .studio-page .motion-film--reveal { height: 290px; }
+}
+/* A masked WebGL layer adds another full-size compositing surface on iOS. */
+@media (pointer: coarse) {
+  .studio-page .motion-film__stage {
+    -webkit-mask-image: none;
+    mask-image: none;
+    contain: paint;
+  }
+  .studio-page .motion-film__canvas,
+  .studio-page .motion-film__fallback { transition: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-page .motion-film { --motion-film-visibility: 1 !important; }
+  .studio-page .motion-film--reveal .motion-film__stage { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; }
+  .studio-page .motion-film__canvas,
+  .studio-page .motion-film__fallback { transition: none; }
+}
+
+/* Phones keep the section entrances, while scroll-scrubbed scene updates stay off. */
+@media (max-width: 760px) {
+  .studio-page.home-motion.home-mobile-sequence .portfolio-flagship {
+    --home-work-opacity: 1 !important;
+    --home-work-lift: 0px !important;
+    --home-work-scale: 1 !important;
+    --home-work-tilt: 0deg !important;
+    will-change: auto !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .portfolio-secondary > article {
+    --home-project-opacity: 1 !important;
+    --home-project-rise: 0px !important;
+    --home-project-scale: 1 !important;
+    --home-project-tilt: 0deg !important;
+    will-change: auto !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .portfolio-secondary > article.home-reveal:not(.home-visible) {
+    --home-project-opacity: 0 !important;
+    --home-project-rise: 18px !important;
+    --home-project-scale: .98 !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .portfolio-secondary > article.home-visible {
+    --home-project-opacity: 1 !important;
+    --home-project-rise: 0px !important;
+    --home-project-scale: 1 !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .services .section-top > *,
+  .studio-page.home-motion.home-mobile-sequence .services .service-list article {
+    --home-services-copy-opacity: 1 !important;
+    --home-services-copy-rise: 0px !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .services .section-top > *.home-reveal:not(.home-visible),
+  .studio-page.home-motion.home-mobile-sequence .services .service-list article.home-reveal:not(.home-visible) {
+    --home-services-copy-opacity: 0 !important;
+    --home-services-copy-rise: 14px !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .services .section-top > *.home-visible,
+  .studio-page.home-motion.home-mobile-sequence .services .service-list article.home-visible {
+    --home-services-copy-opacity: 1 !important;
+    --home-services-copy-rise: 0px !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .stack-list > span {
+    --home-tool-opacity: 1 !important;
+    --home-tool-rise: 0px !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .stack-list > span.home-reveal:not(.home-visible) {
+    --home-tool-opacity: .48 !important;
+  }
+  .studio-page.home-motion.home-mobile-sequence .stack-list > span.home-visible {
+    --home-tool-opacity: 1 !important;
+  }
+}

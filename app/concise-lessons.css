@@ -1,0 +1,47 @@
+/* Short reading path for every lesson. Details remain available on demand. */
+.first-lesson.fl-concise .fl-header {
+  padding: 48px max(24px, calc((100vw - 900px) / 2)) 40px !important;
+}
+.first-lesson.fl-concise .fl-header h1 { font-size: clamp(34px, 4.8vw, 56px); max-width: 24ch; margin: 18px 0; text-wrap: balance; }
+.first-lesson.fl-concise .fl-header > p:not(.fl-kicker) { max-width: 58ch; margin-bottom: 24px; }
+.fl-concise-body { max-width: 900px; margin: auto; padding: 8px 24px 56px; }
+.fl-compact-step { position: relative; padding: 32px 0; border-bottom: 1px solid var(--cinema-line); scroll-margin-top: 80px; }
+.fl-chapter-anchor { display: block; height: 0; scroll-margin-top: 80px; }
+.first-lesson.fl-concise h2 { margin: 10px 0 20px; font-size: clamp(24px, 3vw, 32px); line-height: 1.3; }
+.fl-compact-actions { padding-left: 24px; margin: 0; }
+.fl-compact-actions li { margin: 12px 0; padding-left: 6px; line-height: 1.75; overflow-wrap: anywhere; }
+.fl-compact-actions li::marker { color: var(--cinema-copper); }
+.fl-compact-result { margin: 22px 0 16px; padding: 14px 18px; border-left: 2px solid var(--cinema-copper); background: var(--cinema-panel); color: #cbc7bf; line-height: 1.7; }
+.fl-compact-result strong { color: var(--cinema-cream); }
+.fl-concise .fl-compact-prompt { margin: 20px 0; padding: 18px 20px; }
+.fl-compact-prompt > div { flex-wrap: wrap; }
+.first-lesson.fl-concise .fl-compact-prompt button { min-height: 44px; margin: 0; }
+.fl-compact-prompt details { margin-top: 8px; }
+.fl-compact-prompt summary, .fl-compact-help > summary { padding: 12px 0; cursor: pointer; line-height: 1.5; color: var(--cinema-cream); }
+.fl-compact-prompt summary::marker, .fl-compact-help > summary::marker { color: var(--cinema-copper); }
+.fl-concise .fl-compact-prompt pre { max-height: none; font: inherit; font-size: 16px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fl-compact-prompt > p:empty { display: none; }
+.fl-compact-prompt > .fl-compact-placeholder { min-height: 0; margin: 12px 0 0; color: #cbc7bf; }
+.fl-compact-help > div, .fl-compact-help > ul { padding-top: 8px; }
+.fl-compact-help a { text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.fl-compact-help li { margin: 10px 0; }
+.fl-compact-resources { padding: 20px 0; }
+.fl-compact-troubleshooting > details { padding: 8px 0 8px 16px; border-left: 1px solid var(--cinema-line); }
+.fl-compact-troubleshooting summary { cursor: pointer; line-height: 1.6; padding: 8px 0; }
+.fl-compact-troubleshooting p { color: #cbc7bf; line-height: 1.75; }
+.fl-compact-completion { padding: 24px; margin: 16px 0 32px; background: var(--cinema-panel); border: 1px solid var(--cinema-line); border-radius: 14px; scroll-margin-top: 80px; }
+.fl-compact-completion fieldset { padding: 0; margin: 0 0 22px; border: 0; min-width: 0; }
+.fl-compact-completion legend { margin-bottom: 12px; color: #cbc7bf; line-height: 1.6; }
+.fl-compact-completion label { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; line-height: 1.6; cursor: pointer; }
+.fl-compact-completion input { width: 20px; height: 20px; margin: 4px 0 0; flex: 0 0 20px; accent-color: var(--cinema-copper); }
+.fl-compact-completion label:focus-within { outline: 2px solid var(--cinema-copper); outline-offset: 3px; border-radius: 4px; }
+.fl-concise-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.fl-concise-footer a { padding: 12px 0; }
+@media (max-width: 600px) {
+  .first-lesson.fl-concise .fl-header { padding: 32px 22px !important; }
+  .fl-concise-body { padding: 0 22px 36px; }
+  .fl-compact-step { padding: 24px 0; }
+  .fl-compact-completion { padding: 18px; }
+  .fl-compact-completion .fl-primary { display: block; width: 100%; text-align: center; }
+  .fl-concise .fl-compact-prompt { padding: 16px; }
+}

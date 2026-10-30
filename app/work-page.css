@@ -1,0 +1,105 @@
+.studio-page.work-page {
+  min-height: 100svh;
+  background: #090b0a;
+}
+
+.studio-page.work-page .nav.nav--home {
+  position: sticky;
+  top: 0;
+}
+
+.studio-page.work-page .nav-links a[aria-current="page"] {
+  color: #e6c8a5;
+}
+
+.studio-page.work-page .nav.nav--home .nav-links > a:last-child {
+  display: inline-flex;
+}
+
+.studio-page.work-page .portfolio {
+  min-height: calc(100svh - 56px);
+  padding: clamp(56px, 8vw, 108px) clamp(20px, 6vw, 84px) 72px;
+}
+
+.studio-page.work-page .portfolio-heading {
+  margin-bottom: clamp(28px, 4vw, 52px);
+}
+
+.studio-page.work-page .portfolio-heading h1 {
+  margin: 18px 0 0;
+  color: #f1eee8;
+  font: 500 clamp(40px, 5vw, 68px)/1.03 var(--font-space), sans-serif;
+  letter-spacing: -.055em;
+}
+
+.studio-page.work-page .portfolio-heading h1 em {
+  color: #c9a17c;
+  font: italic 400 .83em/1.12 Georgia, serif;
+  letter-spacing: -.035em;
+}
+
+.studio-page.work-page .portfolio-flagship > header h2,
+.studio-page.work-page .portfolio-project-copy h2 {
+  margin: 12px 0;
+  font: 500 clamp(28px, 3vw, 34px)/1.12 var(--font-display), sans-serif;
+  letter-spacing: -.04em;
+}
+
+.studio-page.work-page .portfolio-flagship,
+.studio-page.work-page .portfolio-secondary > article {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.studio-page.work-page .portfolio-heading > *,
+.studio-page.work-page .portfolio-flagship > header,
+.studio-page.work-page .portfolio-tabs,
+.studio-page.work-page .portfolio-explanation,
+.studio-page.work-page .portfolio-stack,
+.studio-page.work-page .portfolio-project-copy,
+.studio-page.work-page .portfolio-next {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.studio-page.work-page > footer {
+  margin-top: 0;
+}
+
+/* Keep the work index reachable from the opening cards on narrow screens. */
+body .studio-page .studio-path-services > .studio-home-work-overview {
+  min-height: 36px;
+  margin-top: 7px;
+  padding: 8px 14px;
+  border: 1px solid rgba(241, 240, 233, .27) !important;
+  border-radius: 999px;
+  background: transparent !important;
+  color: #eeeadd !important;
+  box-shadow: none !important;
+}
+
+body .studio-page .studio-path-services > .studio-home-work-overview > span {
+  color: inherit !important;
+}
+
+body .studio-page .studio-path-services > .studio-home-work-overview:hover {
+  background: rgba(241, 238, 232, .09) !important;
+}
+
+@media (max-width: 760px) {
+  .studio-page.work-page .portfolio {
+    min-height: auto;
+    padding: 42px 20px 52px;
+  }
+
+  .studio-page.work-page .portfolio-heading h1 {
+    margin-top: 14px;
+    font-size: clamp(38px, 10vw, 50px);
+  }
+
+  .studio-page.work-page .nav.nav--home .nav-cta-account {
+    display: inline-flex !important;
+  }
+}

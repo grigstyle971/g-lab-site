@@ -1,0 +1,1 @@
+const fs=require('fs');(async()=>{const index=JSON.parse(fs.readFileSync('.translation-work/model-index.json'));const r=await fetch(index[0].links[0]);if(!r.ok)throw Error(r.status);fs.writeFileSync('.translation-work/en-ru.argosmodel',Buffer.from(await r.arrayBuffer()));console.log('Model downloaded');})();
